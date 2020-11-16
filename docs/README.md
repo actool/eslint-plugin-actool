@@ -1,6 +1,8 @@
 # Supported Rules
 
 > Later, will be splitted by files `/docs/rules/{rule}.md`
+>
+> [More complex version of rules (RU)](https://github.com/actool/actool-cli/blob/dev/rules.md)
 
 ## TODOs/FIXMes chaos
 - `max-tags-file` - limit TODO/FIXME tags in file
