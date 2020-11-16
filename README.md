@@ -112,5 +112,8 @@ Then configure the rules you want to use under the rules section.
 - `no-commented-code` - limit commented code usage and storing
 
 
+## See also
+- [Team](https://github.com/actool/eslint-plugin-actool/blob/master/DEV.md#team)
+- [Plans](https://github.com/actool/eslint-plugin-actool/blob/master/DEV.md#plans)
 
 
