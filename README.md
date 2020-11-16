@@ -11,6 +11,7 @@ Actool rules for ESLint to validate code / comments actuality and relevance.
 - Control **rubbish code**
 
 <!-- TODO [**Propose or contribute a new rule ➡**](.github/contributing.md) -->
+> **DISCLAIMER**: Work in process, and for a while - here is *approximate* description
 
 ## Table of contents
 
