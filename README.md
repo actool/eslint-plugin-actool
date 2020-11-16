@@ -105,5 +105,6 @@ Then configure the rules you want to use under the rules section.
    > Commit like nobody sees, Push like nobody hears
 - [Team](./DEV.md#team)
 - [Plans](./DEV.md#plans)
+- [FAQ](./FAQ.md)
 
 
