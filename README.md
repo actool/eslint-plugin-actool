@@ -102,8 +102,7 @@ Then configure the rules you want to use under the rules section.
 
 ## Also
 - You want to participate in the development of the project? Have a look at our [contributing](./CONTRIBUTING.md) guide!
-   > Commit like nobody sees<br/>
-   > Push like nobody hears<br/>
+   > Commit like nobody sees, Push like nobody hears
 - [Team](./DEV.md#team)
 - [Plans](./DEV.md#plans)
 
