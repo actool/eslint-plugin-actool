@@ -21,6 +21,7 @@ Actool rules for ESLint to validate code / comments actuality and relevance.
       * [TODOs/FIXMes chaos](#todosfixmes-chaos)
       * [Comments actuality](#comments-actuality)
       * [Rubbish code](#rubbish-code)
+   * [See also](#see-also)
 <!--te-->
 
 ## Overview
