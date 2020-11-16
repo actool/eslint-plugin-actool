@@ -20,7 +20,7 @@ First of all, thanks for taking the time to contribute! :+1:
    > Share your opinion and help us with others' suggestions!
 - Fix [typos, style, comments, docs, deps, ...][pr-new]
    > And be tolerant of our CI...
-- Create new rule
+- Create [new rule](/docs/new-rule.md)
 
 <!--TODO Specify later
 
