@@ -19,9 +19,6 @@ Actool rules for ESLint to validate code / comments actuality and relevance.
    * [Overview](#overview)
    * [Installation](#installation)
    * [Supported Rules](#supported-rules)
-      * [TODOs/FIXMes chaos](#todosfixmes-chaos)
-      * [Comments actuality](#comments-actuality)
-      * [Rubbish code](#rubbish-code)
    * [See also](#see-also)
 <!--te-->
 
@@ -99,20 +96,7 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-> Later, will be splitted by files `/docs/rules/{rule}.md`
-
-### TODOs/FIXMes chaos
-- `max-tags-file` - limit TODO/FIXME tags in file
-- `max-tags-project` - limit TODO/FIXME tags in project
-   
-### Comments actuality
-- `relevant-comments-block` - validate relevanting of block's comment doclet
-- `relevant-comments-line` - validate relevanting of line's comment doclet
-- `relevant-comments-module` - validate relevanting of module's comment doclet
-
-### Rubbish code
-- `no-commented-code` - limit commented code usage and storing
-
+- See [supported rules](/docs/README.md)
 
 ## See also
 - [Team](https://github.com/actool/eslint-plugin-actool/blob/master/DEV.md#team)
