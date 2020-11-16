@@ -13,7 +13,7 @@ First of all, thanks for taking the time to contribute! :+1:
    > If something doesn't work well for you or can be done better, please let us know! 
    When you are creating a new issue, fill out the issue template, the information it asks for helps us resolve issues faster.
 - Estimate [issues][issues] 
-   > Share your opinion, estimated given problem context from author
+   > Share your opinion, evaluate given problem context from author
 - Repeat difficult [issues][issues]
    > Some issues hard to repeat
 - Review [pull requests][pr]
