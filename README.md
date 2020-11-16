@@ -101,7 +101,7 @@ Then configure the rules you want to use under the rules section.
 - See [supported rules](/docs/README.md)
 
 ## Also
-- You want to participate in the development of the project? Have a look at our [contributing](./docs/CONTRIBUTING.md) guide!
+- You want to participate in the development of the project? Have a look at our [contributing](./CONTRIBUTING.md) guide!
    > Commit like nobody sees<br/>
    > Push like nobody hears<br/>
 - [Team](./DEV.md#team)
