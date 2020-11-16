@@ -12,6 +12,17 @@ Actool rules for ESLint to validate code / comments actuality and relevance.
 
 <!-- TODO [**Propose or contribute a new rule ➡**](.github/contributing.md) -->
 
+## Table of contents
+
+<!--ts-->
+   * [Overview](#overview)
+   * [Installation](#installation)
+   * [Supported Rules](#supported-rules)
+      * [TODOs/FIXMes chaos](#todosfixmes-chaos)
+      * [Comments actuality](#comments-actuality)
+      * [Rubbish code](#rubbish-code)
+<!--te-->
+
 ## Overview
 > *"Code never lies, comments sometimes do." - Ron Jeffries*
 
