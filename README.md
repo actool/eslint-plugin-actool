@@ -27,6 +27,8 @@ Actool rules for ESLint to validate code / comments actuality and relevance.
 
 Actool provides tools **for validating comments** in code - *based on your config, code and commits history.*
 
+<!--TODO diff + ts highlighting -->
+
 Tool was conceived to solve following problems:
 - Comments for code block *loses their actuality fastly* - during developing (becomes *irrelevant*)
 ```diff
