@@ -86,11 +86,6 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-* Fill in provided rules here
-
-
-## Rules
-
 > Later, will be splitted by files `/docs/rules/{rule}.md`
 
 ### TODOs/FIXMes chaos
