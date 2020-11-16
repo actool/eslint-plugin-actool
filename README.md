@@ -1,6 +1,16 @@
 # eslint-plugin-actool
 
+<!-- TODO: add badges -->
+
+<img src="https://avatars2.githubusercontent.com/u/74495859?s=200&v=4" height="120" align="right">
+
 Actool rules for ESLint to validate code / comments actuality and relevance.
+
+- Control **TODOs chaos**
+- Control **comments actuality**
+- Control **rubbish code**
+
+<!-- TODO [**Propose or contribute a new rule ➡**](.github/contributing.md) -->
 
 ## Installation
 
