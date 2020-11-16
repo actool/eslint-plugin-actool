@@ -19,7 +19,7 @@ Actool rules for ESLint to validate code / comments actuality and relevance.
    * [Overview](#overview)
    * [Installation](#installation)
    * [Supported Rules](#supported-rules)
-   * [See also](#see-also)
+   * [Also](#also)
 <!--te-->
 
 ## Overview
@@ -100,8 +100,11 @@ Then configure the rules you want to use under the rules section.
 
 - See [supported rules](/docs/README.md)
 
-## See also
-- [Team](https://github.com/actool/eslint-plugin-actool/blob/master/DEV.md#team)
-- [Plans](https://github.com/actool/eslint-plugin-actool/blob/master/DEV.md#plans)
+## Also
+- You want to participate in the development of the project? Have a look at our [contributing](./docs/CONTRIBUTING.md) guide!
+   > Commit like nobody sees<br/>
+   > Push like nobody hears<br/>
+- [Team](./DEV.md#team)
+- [Plans](./DEV.md#plans)
 
 
