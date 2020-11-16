@@ -1,6 +1,6 @@
 # eslint-plugin-actool
 
-Toolkit for code / comments actuality and relevance checking
+Actool rules for ESLint to validate code / comments actuality and relevance.
 
 ## Installation
 
@@ -44,6 +44,22 @@ Then configure the rules you want to use under the rules section.
 
 * Fill in provided rules here
 
+
+## Rules
+
+> Later, will be splitted by files `/docs/rules/{rule}.md`
+
+### TODOs/FIXMes chaos
+- `max-tags-file` - limit TODO/FIXME tags in file
+- `max-tags-project` - limit TODO/FIXME tags in project
+   
+### Comments actuality
+- `relevant-comments-block` - validate relevanting of block's comment doclet
+- `relevant-comments-line` - validate relevanting of line's comment doclet
+- `relevant-comments-module` - validate relevanting of module's comment doclet
+
+### Rubbish code
+- `no-commented-code` - limit commented code usage and storing
 
 
 
