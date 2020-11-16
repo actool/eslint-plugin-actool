@@ -18,6 +18,7 @@ Actool rules for ESLint to validate code / comments actuality and relevance.
 <!--ts-->
    * [Overview](#overview)
    * [Installation](#installation)
+   * [Usage](#usage)
    * [Supported Rules](#supported-rules)
    * [Also](#also)
 <!--te-->
