@@ -110,7 +110,7 @@ Then configure the rules you want to use under the rules section.
 - `relevant-comments-line` - validate relevanting of line's comment doclet
 - `relevant-comments-module` - validate relevanting of module's comment doclet
 
-### Rubbish code|
+### Rubbish code
 - `no-commented-code` - limit commented code usage and storing
 
 ## Also
