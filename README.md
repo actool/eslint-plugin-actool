@@ -99,13 +99,25 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-- See [supported rules](/docs/README.md)
+> [More details](https://github.com/actool/eslint-plugin-actool/tree/master/docs)
+
+### TODOs/FIXMes chaos
+- `max-tags-file` - limit TODO/FIXME tags in file
+- ~~WIP: `max-tags-project` - limit TODO/FIXME tags in project~~
+   
+### Comments actuality
+- ~~WIP: `relevant-comments-block` - validate relevanting of block's comment doclet~~
+- ~~WIP: `relevant-comments-line` - validate relevanting of line's comment doclet~~
+- ~~WIP: `relevant-comments-module` - validate relevanting of module's comment doclet~~
+
+### Rubbish code|
+- ~~WIP: `no-commented-code` - limit commented code usage and storing~~
 
 ## Also
-- You want to participate in the development of the project? Have a look at our [contributing](./CONTRIBUTING.md) guide!
+- You want to participate in the development of the project? Have a look at our [contributing](https://github.com/actool/eslint-plugin-actool/blob/master/CONTRIBUTING.md) guide!
    > Commit like nobody sees, Push like nobody hears
-- [Team](./DEV.md#team)
-- [Plans](./DEV.md#plans)
-- [FAQ](./FAQ.md)
+- [Team](https://github.com/actool/eslint-plugin-actool/blob/master/DEV.md#team)
+- [Plans](https://github.com/actool/eslint-plugin-actool/blob/master/DEV.md#plans)
+- [FAQ](https://github.com/actool/eslint-plugin-actool/blob/master/FAQ.md)
 
 
