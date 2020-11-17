@@ -1,7 +1,10 @@
 ---
 name: Bug report
 about: A rule isn't working as it should?
+title: ''
 labels: bug
+assignees: ''
+
 ---
 
 <!-- ✨ Thanks for reporting a bug! ➡️ Please don't ignore this template -->

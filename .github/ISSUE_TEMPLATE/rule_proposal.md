@@ -1,7 +1,10 @@
 ---
 name: Rule proposal
 about: Have an idea for a new rule?
-labels: new rule, evaluating, enhancement
+title: ''
+labels: enhancement, evaluating, new rule
+assignees: ''
+
 ---
 
 <!-- ✨ Thanks for rule proposing! ➡️ Please don't ignore this template -->
