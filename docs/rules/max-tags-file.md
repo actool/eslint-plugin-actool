@@ -1,36 +1,71 @@
 # Limit TODO/FIXME tags amount in file (max-tags-file)
 
-Please describe the origin of the rule here.
+<!-- Please describe the origin of the rule here. -->
 
 
 ## Rule Details
 
-This rule aims to...
+This rule aims to limit TODO/FIXME tags amount in file
 
 Examples of **incorrect** code for this rule:
 
 ```js
+// --- Less or equal `max` value (default=4)
 
-// fill me in
-
+// TODO: 1
+...
+/* FIXME: 1 */
+...
+// FIXME: 2
+...
+/**
+ * TODO: 4
+ */
+...
 ```
 
 Examples of **correct** code for this rule:
 
 ```js
+// --- Greater `max` value (default=4)
 
-// fill me in
-
+// TODO: 1
+...
+/* FIXME: 1 */
+...
+// FIXME: 2
+...
+/**
+ * TODO: 4
+ */
+// --- To much tags!
+/**
+ * TODO: 5
+ */
+/**
+ * TODO: 6
+ */
+...
 ```
 
 ### Options
 
-If there are any options, describe them here. Otherwise, delete this section.
+> While not work =(
+
+- `maxTags` - maximum allowed tags at file
+```js
+// To enable only 2 TODO/FIXME tags at file
+"actool/max-tags-file": [2, 2],
+// To disable any tags at file
+"actool/max-tags-file": [2, 0],
+```
 
 ## When Not To Use It
 
-Give a short description of when it would be appropriate to turn off this rule.
+In cases, when growing of TODO/FIXME tags isn't problem for your project or when it's part of your workflow.
 
 ## Further Reading
 
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+- https://github.com/actool/eslint-plugin-actool/issues/16
+
+<!-- TODO: add links to TODO/FIXME chaos problem -->
