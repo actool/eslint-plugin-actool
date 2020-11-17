@@ -103,15 +103,15 @@ Then configure the rules you want to use under the rules section.
 
 ### TODOs/FIXMes chaos
 - [max-tags-file](docs/rules/max-tags-file.md) - limit TODO/FIXME tags in file
-- ~~WIP: `max-tags-project` - limit TODO/FIXME tags in project~~
+- `max-tags-project` - limit TODO/FIXME tags in project
    
 ### Comments actuality
-- ~~WIP: `relevant-comments-block` - validate relevanting of block's comment doclet~~
-- ~~WIP: `relevant-comments-line` - validate relevanting of line's comment doclet~~
-- ~~WIP: `relevant-comments-module` - validate relevanting of module's comment doclet~~
+- `relevant-comments-block` - validate relevanting of block's comment doclet
+- `relevant-comments-line` - validate relevanting of line's comment doclet
+- `relevant-comments-module` - validate relevanting of module's comment doclet
 
 ### Rubbish code|
-- ~~WIP: `no-commented-code` - limit commented code usage and storing~~
+- `no-commented-code` - limit commented code usage and storing
 
 ## Also
 - You want to participate in the development of the project? Have a look at our [contributing](CONTRIBUTING.md) guide!
