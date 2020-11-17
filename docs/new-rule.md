@@ -16,7 +16,7 @@ This small guide should help you to implement your own rule for `eslint-plugin-a
 ## Tip
 
 - Use the [**astexplorer** site](https://astexplorer.net) with the `espree` parser and `ESLint v4` transform to interactively create the initial rule implementation. It lets you inspect the full AST as you would get from ESLint and you can even see the result of your auto-fixer implementation.
-
+- Use vscode debugger with breakpoints to access eslint-context and rule's process
 
 ## Steps
 
