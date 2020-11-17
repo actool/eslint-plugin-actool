@@ -99,10 +99,10 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-> [More details](https://github.com/actool/eslint-plugin-actool/tree/master/docs)
+> [More details (RU)](https://github.com/actool/actool-cli/blob/dev/rules.md)
 
 ### TODOs/FIXMes chaos
-- `max-tags-file` - limit TODO/FIXME tags in file
+- [max-tags-file](docs/rules/max-tags-file.md) - limit TODO/FIXME tags in file
 - ~~WIP: `max-tags-project` - limit TODO/FIXME tags in project~~
    
 ### Comments actuality
@@ -114,10 +114,10 @@ Then configure the rules you want to use under the rules section.
 - ~~WIP: `no-commented-code` - limit commented code usage and storing~~
 
 ## Also
-- You want to participate in the development of the project? Have a look at our [contributing](https://github.com/actool/eslint-plugin-actool/blob/master/CONTRIBUTING.md) guide!
+- You want to participate in the development of the project? Have a look at our [contributing](CONTRIBUTING.md) guide!
    > Commit like nobody sees, Push like nobody hears
-- [Team](https://github.com/actool/eslint-plugin-actool/blob/master/DEV.md#team)
-- [Plans](https://github.com/actool/eslint-plugin-actool/blob/master/DEV.md#plans)
-- [FAQ](https://github.com/actool/eslint-plugin-actool/blob/master/FAQ.md)
+- [Team](DEV.md#team)
+- [Plans](DEV.md#plans)
+- [FAQ](FAQ.md)
 
 
