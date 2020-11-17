@@ -1,7 +1,10 @@
 ---
 name: Feature Request
 about: Something should be enhanced / implemented?
+title: ''
 labels: enhancement
+assignees: ''
+
 ---
 
 <!-- ✨ Thanks for feature suggesting! ➡️ Please don't ignore this template -->
