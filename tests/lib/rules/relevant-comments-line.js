@@ -53,7 +53,12 @@ const getSharedDictionaries = async () => {
 /**
  * @type {import("eslint").RuleTester}
  */
-const ruleTester = new RuleTester({ parserOptions: { ecmaVersion: 2018 }});
+const ruleTester = new RuleTester({
+    // Для парсинга типов в TS
+    parser: require.resolve("@typescript-eslint/parser"),
+    parserOptions: { ecmaVersion: 2018 }, 
+});
+
 ruleTester.run("relevant-comments-line", rule, {
     valid: [
         // {
