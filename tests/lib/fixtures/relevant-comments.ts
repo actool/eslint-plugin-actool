@@ -1,12 +1,25 @@
+type DictionariesAPI = {
+    getSchedules: () => any;
+    getVehicles: () => any;
+    getIssueStatuses: () => any;
+}
+
 // TODO: fix types
-const API = {} as any;
+const API = {} as DictionariesAPI;
 
 /**
  * Get schedules from server
  */
-const getDictionaries = async () => {
+const getSharedDictionaries = async () => {
     const { data: schedules } = await API.getSchedules();
-    return schedules;
+    const { data: vehicles } = await API.getVehicles();
+    const { data: issueStatuses } = await API.getIssueStatuses();
+
+    return {
+        schedules,
+        vehicles,
+        issueStatuses,
+    }
 }
 
 /**
