@@ -33,10 +33,10 @@ ruleTester.run("relevant-comments-line", rule, {
             code: defaultCode,
             filename: "docs/rules/max-tags-file.md",
         },
-        {
-            code: defaultCode,
-            filename: "S:/work/com.megapolis/.proj/rms/src/app/store/index.ts",
-        }
+        // {
+        //     code: defaultCode,
+        //     filename: "S:/work/com.megapolis/.proj/rms/src/app/store/index.ts",
+        // }
     ],
     invalid: [
         /* {
