@@ -16,7 +16,8 @@
   "repository": "git://github.com/actool/eslint-plugin-actool",
   "scripts": {
     "test": "mocha tests --recursive",
-    "new:rule": "yo eslint:rule"
+    "new:rule": "yo eslint:rule",
+    "hist": "node "
   },
   "dependencies": {
     "requireindex": "~1.1.0"
