@@ -17,7 +17,8 @@
   "scripts": {
     "test": "mocha tests --recursive",
     "new:rule": "yo eslint:rule",
-    "hist": "node "
+    "hist": "node ",
+    "test:git": "node lib/rules/utils/git-access.js"
   },
   "dependencies": {
     "requireindex": "~1.1.0"

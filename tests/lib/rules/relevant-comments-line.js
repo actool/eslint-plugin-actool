@@ -1,5 +1,5 @@
 /**
- * @fileoverview Validate relevanting of line&#39;s comment doclet
+ * @fileoverview Validate relevanting of line's comment doclet
  * @author Ilya Azin
  */
 "use strict";
@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var rule = require("../../../lib/rules/relevant-comments-line"),
+const rule = require("../../../lib/rules/relevant-comments-line"),
 
     RuleTester = require("eslint").RuleTester;
 
@@ -17,21 +17,34 @@ var rule = require("../../../lib/rules/relevant-comments-line"),
 // Tests
 //------------------------------------------------------------------------------
 
-var ruleTester = new RuleTester();
+const defaultCode = "console.log('...')";
+
+/**
+ * @type {import("eslint").RuleTester}
+ */
+const ruleTester = new RuleTester({ parserOptions: { ecmaVersion: 2018 }});
 ruleTester.run("relevant-comments-line", rule, {
-
     valid: [
-
-        // give me some code that won't trigger a warning
-    ],
-
-    invalid: [
         {
-            code: "",
-            errors: [{
-                message: "Fill me in.",
-                type: "Me too"
-            }]
+            code: defaultCode,
+            filename: "lib/rules/max-tags-file.js",
+        },
+        {
+            code: defaultCode,
+            filename: "docs/rules/max-tags-file.md",
+        },
+        {
+            code: defaultCode,
+            filename: "S:/work/com.megapolis/.proj/rms/src/app/store/index.ts",
         }
-    ]
+    ],
+    invalid: [
+        /* {
+            code: defaultCode,
+            filename: "...",
+            errors: [
+                
+            ]
+        } */
+    ],
 });
