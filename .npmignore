@@ -3,5 +3,8 @@ node_modules/
 .vscode/
 docs/
 tests/
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+LICENSE
 DEV.md
 FAQ.md
