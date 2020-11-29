@@ -29,6 +29,12 @@ type DictionariesAPI = {
 // TODO: fix types
 const API = {} as DictionariesAPI;
 
+/** data preprocess
+ * with a lot of whitespaces
+ */
+
+
+
 function processData(some: any) {
     return some;
 };
