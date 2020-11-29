@@ -56,7 +56,7 @@ const getSharedDictionaries = async () => {
 const ruleTester = new RuleTester({
     // Для парсинга типов в TS
     parser: require.resolve("@typescript-eslint/parser"),
-    parserOptions: { ecmaVersion: 2018 }, 
+    parserOptions: { ecmaVersion: 2018 },
 });
 
 ruleTester.run("relevant-comments-line", rule, {
@@ -69,16 +69,25 @@ ruleTester.run("relevant-comments-line", rule, {
         //     code: defaultCode,
         //     filename: "docs/rules/max-tags-file.md",
         // },
-        {
-            code: relevantCommentsCode,
-            filename: "tests/lib/fixtures/relevant-comments.ts",
-        },
         // {
         //     code: defaultCode,
         //     filename: "S:/work/com.megapolis/.proj/rms/src/app/store/index.ts",
         // }
     ],
     invalid: [
+        {
+            code: relevantCommentsCode,
+            filename: "tests/lib/fixtures/relevant-comments.ts",
+            errors: [
+                {
+                    message: 'Occured inrelevant comment block',
+                    line: 8,
+                    column: 1,
+                    endLine: 8,
+                    endColumn: 19
+                }
+            ]
+        },
         /* {
             code: defaultCode,
             filename: "...",
