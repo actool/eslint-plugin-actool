@@ -1,4 +1,4 @@
-# Limit TODO/FIXME tags amount in file (max-tags-file)
+# Limit TODO/FIXME tags amount in file (max-tags)
 
 <!-- Please describe the origin of the rule here. -->
 
@@ -55,9 +55,9 @@ Examples of **correct** code for this rule:
 - `maxTags` - maximum allowed tags at file
 ```js
 // To enable only 2 TODO/FIXME tags at file
-"actool/max-tags-file": [2, 2],
+"actool/max-tags": [2, 2],
 // To disable any tags at file
-"actool/max-tags-file": [2, 0],
+"actool/max-tags": [2, 0],
 ```
 
 ## When Not To Use It

@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-const rule = require("../../../lib/rules/relevant-comments-line"),
+const rule = require("../../../lib/rules/relevant-comments"),
 
     RuleTester = require("eslint").RuleTester;
 
@@ -70,15 +70,15 @@ const ruleTester = new RuleTester({
     parserOptions: { ecmaVersion: 2018 },
 });
 
-ruleTester.run("relevant-comments-line", rule, {
+ruleTester.run("relevant-comments", rule, {
     valid: [
         // {
         //     code: defaultCode,
-        //     filename: "lib/rules/max-tags-file.js",
+        //     filename: "lib/rules/max-tags.js",
         // },
         // {
         //     code: defaultCode,
-        //     filename: "docs/rules/max-tags-file.md",
+        //     filename: "docs/rules/max-tags.md",
         // },
         // {
         //     code: defaultCode,

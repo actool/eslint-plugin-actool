@@ -1,4 +1,4 @@
-# Validate relevanting of line&#39;s comment doclet (relevant-comments-line)
+# Validate relevanting of line&#39;s comment doclet (relevant-comments)
 
 Please describe the origin of the rule here.
 
