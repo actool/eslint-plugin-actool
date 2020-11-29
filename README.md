@@ -103,12 +103,10 @@ Then configure the rules you want to use under the rules section.
 
 <!--TODO: rename base rule -->
 - [max-tags](docs/rules/max-tags-file.md) - limit TODO/FIXME tags
-   - scope: `file`, `project`
-
+   > scope: *file*, *project*
 <!--TODO: rename base rule -->
-- `relevant-comments-block` - validate relevanting of comment doclet with corresponding code statement
-   - scope: `line`, `block`, `module`
-
+- `relevant-comments` - validate relevanting of comment doclet with corresponding code statement
+   > scope: *line*, *block*, *module*
 - `no-commented-code` - limit commented code usage and storing
 
 ## Also
