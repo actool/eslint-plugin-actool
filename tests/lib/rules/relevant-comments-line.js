@@ -29,6 +29,10 @@ type DictionariesAPI = {
 // TODO: fix types
 const API = {} as DictionariesAPI;
 
+function processData(some: any) {
+    return some;
+};
+
 /**
  * Get schedules from server
  */
@@ -38,15 +42,16 @@ const getSharedDictionaries = async () => {
     const { data: issueStatuses } = await API.getIssueStatuses();
 
     return {
-        schedules,
-        vehicles,
-        issueStatuses,
+        schedules: processData(schedules),
+        vehicles: processData(vehicles),
+        issueStatuses: processData(issueStatuses),
     }
 }
 
 /**
  * TODO: simplify fetching
  * FIXME: types
+ * UPD: new info
  */
 `
 
