@@ -101,16 +101,14 @@ Then configure the rules you want to use under the rules section.
 
 > [More details (RU)](https://github.com/actool/actool-cli/blob/dev/rules.md)
 
-### TODOs/FIXMes chaos
-- [max-tags-file](docs/rules/max-tags-file.md) - limit TODO/FIXME tags in file
-- `max-tags-project` - limit TODO/FIXME tags in project
-   
-### Comments actuality
-- `relevant-comments-block` - validate relevanting of block's comment doclet
-- `relevant-comments-line` - validate relevanting of line's comment doclet
-- `relevant-comments-module` - validate relevanting of module's comment doclet
+<!--TODO: rename base rule -->
+- [max-tags](docs/rules/max-tags-file.md) - limit TODO/FIXME tags
+   - scope: `file`, `project`
 
-### Rubbish code
+<!--TODO: rename base rule -->
+- `relevant-comments-block` - validate relevanting of comment doclet with corresponding code statement
+   - scope: `line`, `block`, `module`
+
 - `no-commented-code` - limit commented code usage and storing
 
 ## Also
