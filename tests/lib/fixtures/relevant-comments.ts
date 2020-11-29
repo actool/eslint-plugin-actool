@@ -25,4 +25,5 @@ const getSharedDictionaries = async () => {
 /**
  * TODO: simplify fetching
  * FIXME: types
+ * UPD: new info
  */
