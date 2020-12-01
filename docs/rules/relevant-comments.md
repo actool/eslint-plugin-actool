@@ -5,59 +5,106 @@ During the developement you may want to have specific block of code to have bein
 
 ## Rule Details
 
-This rule let you specify which blocks of code you'd want to check for comments
-
-### Options
-
-- With `scope` option you specify which blocks of code  are ought to be reviewed:
-  + `line`
-  + `block`
-  + `module`
+This rule aims to control [relevancy and actuality](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#relevancy-validating) of your code
 
 ```js
-// The example
-"actool/relevant-comments-line": {
-    'scope': [
-        'line',
-        'block',
-    ]
-}
+/**                                    // comment block lastCommit: A            
+ * Get schedules from server
+ * TODO: some subtask
+ */
+const getSharedDictionaries = () => {  // code block lastCommit: B
 ```
 
-**line**
-Example of code with `line` option:
+### Fail
+```js
+// You can specify allowed commits diff by options (see below)
+
+if (diffCommits(A, B) > 4)
+
+// or by dates if specified
+// if (diffDates(A.date, B.date) > 4)
+```
+
+### Pass
+```js
+// You can specify allowed commits diff by options (see below)
+
+if (diffCommits(A, B) <= 4)
+
+// or by dates if specified
+// if (diffDates(A.date, B.date) <= 4)
+```
+
+## Options
+
+> **WIP**: For a while - aren't available
+
+### `scope`
+Controls the rule behaviour for specific scope
+- [**"line"**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#line-comment) - for each line
+
+- [**"block"**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#block-comment) - for each code block
+
+- [**"module"**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#module-comment) - for each module
 
 ```js
-// TODO rename to ...  - this line is being reviewed
-let a = Object()
-
-// FIXME ...
-let foo = function() {  // this function isn't, but with `block` option would be
-    ...
-}
+// disable relevancy linting for line / block / module scopes
+"actool/relevant-comments": [2, { line: null }] // or { block: null } or { module: null }
+// customize options for specific scope
+"actool/relevant-comments": [2, { 
+    line: { ... }, // line scope config
+    block: { ... } // block scope config
+    module: { ... } // module scope config
+] 
 ```
+<details>
+    <summary>defaultValue</summary>
 
-**block**
-Example of code with `block` option:
+    {
+        line: null,
+        block: { ... }, // see below
+        module: null,
+    }
+</details>
+
+### `by`
+Specify base validating entity
+- [**commit**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#commit)
+- [**days**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#days-experimental)
+  > experimental
+  
+```js
+// specify validating entity for line / block / module scopes
+"actool/relevant-comments": [2, { 
+    block: { by: "date" }
+}]
+```
+<details>
+    <summary>defaultValue</summary>
+
+    [any-scope]: commit
+</details>
+
+### `diff`
+Allowable diff between commits/days (for validating)
+
+> Counting only **relevant for current block** commits (days)
 
 ```js
-// TODO ...  - this block is being reviewed
-let foo = function() {  // this block of code is being reviewed
-    ...
-}
+// specify validating entity for line / block / module scopes
+"actool/relevant-comments": [2, { 
+    block: { diff: 8 }
+}]
 ```
+<details>
+    <summary>defaultValue</summary>
 
-**module**
-Example of code with `module` option:
+    [any-scope]: 4
+</details>
 
-```js
-// #file.js  -  this module is being reviewed
+## Further Reading
 
-// TODO ...  - this line is being reviewed
-let a = Object()
+- https://github.com/actool/eslint-plugin-actool/issues/25
+- https://github.com/actool/eslint-plugin-actool#comments-relevancy
 
-// FIXME -  this block is being reviewed
-let foo = function() {  // this function isn't, but with `block` option would be
-    ...
-}
-```
+<!-- TODO: add links about problem -->
