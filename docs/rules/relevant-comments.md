@@ -69,13 +69,13 @@ Controls the rule behaviour for specific scope
 
 ### `by`
 Specify base validating entity
-- [**commit**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#commit)
-- [**days**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#days-experimental)
+- [**commit**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#commit) - diff by commits
+- [**days**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#days-experimental) - diff by days
   > experimental
   
 ```js
 "actool/relevant-comments": [2, { 
-    block: { by: "date" }
+    block: { by: "days" }
 }]
 ```
 <details>
