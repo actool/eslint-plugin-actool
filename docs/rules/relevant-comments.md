@@ -41,11 +41,11 @@ if (diffCommits(A, B) <= 4)
 
 ### `scope`
 Controls the rule behaviour for specific scope
-- [**"line"**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#line-comment) - for each line
+- [**line**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#line-comment) - for each line
 
-- [**"block"**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#block-comment) - for each code block
+- [**block**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#block-comment) - for each code block
 
-- [**"module"**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#module-comment) - for each module
+- [**module**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#module-comment) - for each module
 
 ```js
 // disable relevancy linting for line / block / module scopes
