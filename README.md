@@ -110,7 +110,7 @@ Then configure the rules you want to use under the rules section.
    > scope: *line*, *block*, *module*
 - [`no-commented-code`](docs/rules/no-commented-code.md) - limit commented code usage and storing
 
-> [More details](docs/how-it-work.md)
+> [More details](/docs/how-it-work.md)
 
 ## Also
 - You want to participate in the development of the project? Have a look at our [contributing](CONTRIBUTING.md) guide!
