@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var rule = require("../../../lib/rules/max-tags-file"),
+var rule = require("../../../lib/rules/max-tags"),
 
     RuleTester = require("eslint").RuleTester;
 
@@ -21,7 +21,7 @@ var rule = require("../../../lib/rules/max-tags-file"),
  * @type {import("eslint").RuleTester}
  */
 const ruleTester = new RuleTester({ parserOptions: { ecmaVersion: 2018 }});
-ruleTester.run("max-tags-file", rule, {
+ruleTester.run("max-tags", rule, {
 
     valid: [
         `

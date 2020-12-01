@@ -1,4 +1,4 @@
-# Validate relevanting of line&#39;s comment doclet (relevant-comments-line)
+# Validate relevanting of line&#39;s comment doclet (relevant-comments)
 
 During the developement you may want to have specific block of code to have being reviewed by actool
 

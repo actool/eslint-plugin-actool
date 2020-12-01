@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-actool",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "description": "Toolkit for code / comments actuality and relevance checking",
   "keywords": [
     "eslint",
@@ -15,6 +15,10 @@
   "main": "lib/index.js",
   "repository": "git://github.com/actool/eslint-plugin-actool",
   "scripts": {
+    "publish:prepatch": "npm version prepatch && npm publish",
+    "publish:patch": "npm version patch && npm publish",
+    "publish:minor": "npm version minor && npm publish",
+    "publish:major": "npm version major && npm publish",
     "test": "mocha tests --recursive",
     "new:rule": "yo eslint:rule",
     "hist": "node ",
@@ -24,8 +28,10 @@
     "requireindex": "~1.1.0"
   },
   "devDependencies": {
+    "@typescript-eslint/parser": "^4.8.2",
     "eslint": "^7.1.0",
     "mocha": "^7.2.0",
+    "typescript": "^4.1.2",
     "yo": "^3.1.1"
   },
   "engines": {
