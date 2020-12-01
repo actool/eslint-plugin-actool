@@ -1,8 +1,14 @@
-# `relevant-comments`
+# WIP: `relevant-comments`
 
 **Validate relevanting of line&#39;s comment doclet**
 
 During the developement you may want to have specific block of code to have being reviewed by actool
+
+```js
+"actool/relevant-comments": [<severity>, {
+    <options>
+}
+```
 
 
 ## Rule Details
@@ -83,7 +89,7 @@ Specify base validating entity
 <details>
     <summary>defaultValue</summary>
 
-    [any-scope]: commit
+    [any-scope]: "commit"
 </details>
 
 ### `diff`
