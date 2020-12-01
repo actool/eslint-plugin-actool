@@ -103,4 +103,20 @@ const getSharedDictionaries = () => {  // code block lastCommit: **commit2**
 validateDiff(commit1: Commit, commit2: Commit, diff: number): boolean
 validateDiff(date1: Date, date2: Date, diff: number): boolean
 ```
+
 <a href="https://ibb.co/kKQVqYw"><img src="https://i.ibb.co/kKQVqYw/67538-Image-889x474-Color.png" alt="67538-Image-889x474-Color" border="0"></a>
+
+### Validating entities
+#### Commit
+By history intermediate commits
+
+```js
+if (validateDiff(commit1, commit2, diff)
+```
+
+#### Days (experimental)
+By trivial days comparsion
+
+```js
+if (validateDiff(commit1.date, commit2.date, diff))
+```
