@@ -74,7 +74,6 @@ Specify base validating entity
   > experimental
   
 ```js
-// specify validating entity for line / block / module scopes
 "actool/relevant-comments": [2, { 
     block: { by: "date" }
 }]
@@ -91,7 +90,6 @@ Allowable diff between commits/days (for validating)
 > Counting only **relevant for current block** commits (days)
 
 ```js
-// specify validating entity for line / block / module scopes
 "actool/relevant-comments": [2, { 
     block: { diff: 8 }
 }]
