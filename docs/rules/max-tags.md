@@ -7,7 +7,7 @@
 
 This rule aims to limit TODO/FIXME tags amount in file
 
-### Invalid
+### Fail
 
 ```js
 // --- Greater `max` value (for example - 4 for file scope)
@@ -31,7 +31,7 @@ This rule aims to limit TODO/FIXME tags amount in file
 ...
 ```
 
-### Valid
+### Pass
 
 ```js
 // --- Less or equal `max` value (for example - 4 for file scope)
