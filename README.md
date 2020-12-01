@@ -104,13 +104,13 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-> [More details (RU)](https://github.com/actool/actool-cli/blob/dev/rules.md)
-
-- [max-tags](docs/rules/max-tags.md) - limit TODO/FIXME tags
+- [`max-tags`](docs/rules/max-tags.md) - limit TODO/FIXME tags
    > scope: *file*, *project*
-- [relevant-comments](docs/rules/relevant-comments.md) - validate relevanting of comment doclet with corresponding code statement
+- [`relevant-comments`](docs/rules/relevant-comments.md) - validate relevanting of comment doclet with corresponding code statement
    > scope: *line*, *block*, *module*
-- [no-commented-code](docs/rules/no-commented-code.md) - limit commented code usage and storing
+- [`no-commented-code`](docs/rules/no-commented-code.md) - limit commented code usage and storing
+
+> [More details](docs/how-it-work.md)
 
 ## Also
 - You want to participate in the development of the project? Have a look at our [contributing](CONTRIBUTING.md) guide!
@@ -118,6 +118,5 @@ Then configure the rules you want to use under the rules section.
 - [Team](DEV.md#team)
 - [Plans](DEV.md#plans)
 - [FAQ](FAQ.md)
-- [How it work](docs/how-it-work.md)
 
 
