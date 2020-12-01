@@ -14,9 +14,9 @@ This rule aims to limit TODO/FIXME tags amount in file
 
 // TODO: 1
 ...
-/* FIXME: 1 */
+/* FIXME: 2 */
 ...
-// FIXME: 2
+// FIXME: 3
 ...
 /**
  * TODO: 4
@@ -38,9 +38,9 @@ This rule aims to limit TODO/FIXME tags amount in file
 
 // TODO: 1
 ...
-/* FIXME: 1 */
+/* FIXME: 2 */
 ...
-// FIXME: 2
+// FIXME: 3
 ...
 /**
  * TODO: 4
