@@ -50,14 +50,17 @@ Examples of **correct** code for this rule:
 
 ### Options
 
-> While not work =(
+- apply this rule by `scope` option:
+    - `file` - to specific files
+    - `project` - to whole project
+- `maxTags` - maximum allowed tags `number` at file
 
-- `maxTags` - maximum allowed tags at file
 ```js
-// To enable only 2 TODO/FIXME tags at file
-"actool/max-tags-file": [2, 2],
-// To disable any tags at file
-"actool/max-tags-file": [2, 0],
+// The example
+"actool/max-tags-file": {
+    'scope': 'project',
+    'maxTags': 5
+}
 ```
 
 ## When Not To Use It

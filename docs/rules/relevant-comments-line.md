@@ -1,36 +1,63 @@
 # Validate relevanting of line&#39;s comment doclet (relevant-comments-line)
 
-Please describe the origin of the rule here.
+During the developement you may want to have specific block of code to have being reviewed by actool
 
 
 ## Rule Details
 
-This rule aims to...
-
-Examples of **incorrect** code for this rule:
-
-```js
-
-// fill me in
-
-```
-
-Examples of **correct** code for this rule:
-
-```js
-
-// fill me in
-
-```
+This rule let you specify which blocks of code you'd want to check for comments
 
 ### Options
 
-If there are any options, describe them here. Otherwise, delete this section.
+- With `scope` option you specify which blocks of code  are ought to be reviewed:
+  + `line`
+  + `block`
+  + `module`
 
-## When Not To Use It
+```js
+// The example
+"actool/relevant-comments-line": {
+    'scope': [
+        'line',
+        'block',
+    ]
+}
+```
 
-Give a short description of when it would be appropriate to turn off this rule.
+**line**
+Example of code with `line` option:
 
-## Further Reading
+```js
+// TODO rename to ...  - this line is being reviewed
+let a = Object()
 
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+// FIXME ...
+let foo = function() {  // this function isn't, but with `block` option would be
+    ...
+}
+```
+
+**block**
+Example of code with `block` option:
+
+```js
+// TODO ...  - this block is being reviewed
+let foo = function() {  // this block of code is being reviewed
+    ...
+}
+```
+
+**module**
+Example of code with `module` option:
+
+```js
+// #file.js  -  this module is being reviewed
+
+// TODO ...  - this line is being reviewed
+let a = Object()
+
+// FIXME -  this block is being reviewed
+let foo = function() {  // this function isn't, but with `block` option would be
+    ...
+}
+```
