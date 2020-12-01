@@ -14,8 +14,8 @@ Limit commented code usage and storing
 This rule aims to control [commented code](https://github.com/actool/eslint-plugin-actool#rubbish-code) in your project
 
 ```js
-// commented block lastCommit: A 
-// code block lastCommit: B
+// commented code lastCommit: A 
+// "live" code lastCommit: B
 
  return (
      <div className="toolbar">
@@ -99,6 +99,10 @@ Acceptable difference between the number of commits (in days) of the "live" code
     4
 </details>
 
+## When Not To Use It
+If you no need to keep commented code
+
+> You can search alternatives for total prohibiting of commented code
 
 ## Further reading
 - https://github.com/actool/eslint-plugin-actool/issues/39
