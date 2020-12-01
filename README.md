@@ -115,6 +115,7 @@ Then configure the rules you want to use under the rules section.
 ## Also
 - You want to participate in the development of the project? Have a look at our [contributing](CONTRIBUTING.md) guide!
    > Commit like nobody sees, Push like nobody hears
+- Find the bug / potential improvement ? [Let us know =)](https://github.com/actool/eslint-plugin-actool/issues)
 - [Team](DEV.md#team)
 - [Plans](DEV.md#plans)
 - [FAQ](FAQ.md)
