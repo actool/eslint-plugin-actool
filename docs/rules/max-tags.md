@@ -7,27 +7,10 @@
 
 This rule aims to limit TODO/FIXME tags amount in file
 
-Examples of **incorrect** code for this rule:
+### Invalid
 
 ```js
-// --- Less or equal `max` value (default=4)
-
-// TODO: 1
-...
-/* FIXME: 1 */
-...
-// FIXME: 2
-...
-/**
- * TODO: 4
- */
-...
-```
-
-Examples of **correct** code for this rule:
-
-```js
-// --- Greater `max` value (default=4)
+// --- Greater `max` value (for example - 4 for file scope)
 
 // TODO: 1
 ...
@@ -48,19 +31,66 @@ Examples of **correct** code for this rule:
 ...
 ```
 
-### Options
-
-- apply this rule by `scope` option:
-    - `file` - to specific files
-    - `project` - to whole project
-- `maxTags` - maximum allowed tags `number` at file
+### Valid
 
 ```js
-// The example
-"actool/max-tags-file": {
-    'scope': 'project',
-    'maxTags': 5
-}
+// --- Less or equal `max` value (for example - 4 for file scope)
+
+// TODO: 1
+...
+/* FIXME: 1 */
+...
+// FIXME: 2
+...
+/**
+ * TODO: 4
+ */
+...
+```
+
+## Options
+
+> **WIP**: For a while - aren't available
+
+### `scope`
+Controls the rule behaviour for specific scope
+- **"file"** - at each file level
+- **"project"** - at whole project level
+
+<details>
+    <summary>defaultValue</summary>
+
+    {
+        file: null,
+        project: { ... }, // see below
+    }
+</details>
+
+```js
+// disable max-tags linting for file (or project)
+"actool/max-tags": [2, { file: null }] // or { project: null }
+// customize options for specific scope
+"actool/max-tags": [2, { 
+    file: { ... }, // file scope config
+    project: { ... } // project scope config
+] 
+```
+
+### `max`
+Max allowed tags amount in *{scope}*
+
+<details>
+    <summary>defaultValue</summary>
+
+    file: null
+    project: 32
+</details>
+
+```js
+// specify max tags for project (or file) scope
+"actool/max-tags": [2, { 
+    project: { max: 24 }
+}]
 ```
 
 ## When Not To Use It
