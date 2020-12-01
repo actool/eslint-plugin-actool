@@ -54,8 +54,8 @@ This rule aims to limit TODO/FIXME tags amount in file
 
 ### `scope`
 Controls the rule behaviour for specific scope
-- **"file"** - at each file level
-- **"project"** - at whole project level
+- **file** - at each file level
+- **project** - at whole project level
 
 ```js
 // disable max-tags linting for file (or project)
