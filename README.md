@@ -110,7 +110,7 @@ Then configure the rules you want to use under the rules section.
    > scope: *file*, *project*
 - [relevant-comments](docs/rules/relevant-comments.md) - validate relevanting of comment doclet with corresponding code statement
    > scope: *line*, *block*, *module*
-- `no-commented-code` - limit commented code usage and storing
+- [no-commented-code](docs/rules/no-commented-code.md) - limit commented code usage and storing
 
 ## Also
 - You want to participate in the development of the project? Have a look at our [contributing](CONTRIBUTING.md) guide!
