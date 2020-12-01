@@ -1,4 +1,4 @@
-# max-tags
+# `max-tags`
 
 Limit TODO/FIXME tags amount in file
 
