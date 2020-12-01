@@ -1,6 +1,12 @@
-# `max-tags`
+# WIP: `max-tags`
 
 Limit TODO/FIXME tags amount in file
+
+```js
+"actool/max-tags": [<severity>, {
+    <options>
+}
+```
 
 ## Rule Details
 
