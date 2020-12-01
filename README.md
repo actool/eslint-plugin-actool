@@ -118,5 +118,6 @@ Then configure the rules you want to use under the rules section.
 - [Team](DEV.md#team)
 - [Plans](DEV.md#plans)
 - [FAQ](FAQ.md)
+- [How it work](docs/how-it-work.md)
 
 
