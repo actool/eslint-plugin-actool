@@ -51,10 +51,6 @@ if (diffCommits(A, B) <= 4)
 
 > **WIP**: For a while - aren't available
 
-- With `when` option you specify 
-  + `always` - default
-  + `expired
-
 ### `when`
 When validator should be raised
 
