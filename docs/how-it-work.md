@@ -3,6 +3,8 @@
 ### Line comment
 Per each **code line**
 
+<details>
+   
 ```js
 /** line-comment */
 const a = ...
@@ -14,9 +16,22 @@ if (someStament)
 state.value = ...
 ```
 
+```js
+// TODO rename to ...  - this line is being reviewed
+let a = Object()
+
+// FIXME ...
+let foo = function() {  // this function isn't, but with `block` option would be
+    ...
+}
+```
+</details>
+
 ### Block comment
 Per each **code block**
 
+<details>
+   
 ```js
 /** block-comment */
 const someFun = () => {
@@ -34,8 +49,18 @@ function someFun = () => {
 }
 ```
 
+```js
+// TODO ...  - this block is being reviewed
+let foo = function() {  // this block of code is being reviewed
+    ...
+}
+```
+</details>
+
 ### Module comment
 Per each **code module**
+
+<details>
 
 ```js
 import ... from ...
@@ -51,6 +76,19 @@ import ... from ...
 /** other comment */
 const A = () => ...
 ```
+
+```js
+// #file.js  -  this module is being reviewed
+
+// TODO ...  - this line is being reviewed
+let a = Object()
+
+// FIXME -  this block is being reviewed
+let foo = function() {  // this function isn't, but with `block` option would be
+    ...
+}
+```
+</details>
 
 ## Relevancy validating
 
