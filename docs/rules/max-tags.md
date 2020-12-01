@@ -1,7 +1,6 @@
-# Limit TODO/FIXME tags amount in file (max-tags)
+# max-tags
 
-<!-- Please describe the origin of the rule here. -->
-
+Limit TODO/FIXME tags amount in file
 
 ## Rule Details
 
