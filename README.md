@@ -31,7 +31,7 @@ Actool provides tools **for validating comments** in code - *based on your confi
 <!--TODO diff + ts highlighting -->
 
 Tool was conceived to solve following problems:
-- Comments for code block *loses their actuality fastly* - during developing (becomes *irrelevant*)
+- <span id="relevant-comments">Comments for code block *loses their actuality fastly* - during developing (becomes *irrelevant*)</span>
 ```diff
  /**
 - * Get schedules from server
