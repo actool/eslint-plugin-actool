@@ -57,15 +57,6 @@ Controls the rule behaviour for specific scope
 - **"file"** - at each file level
 - **"project"** - at whole project level
 
-<details>
-    <summary>defaultValue</summary>
-
-    {
-        file: null,
-        project: { ... }, // see below
-    }
-</details>
-
 ```js
 // disable max-tags linting for file (or project)
 "actool/max-tags": [2, { file: null }] // or { project: null }
@@ -75,16 +66,18 @@ Controls the rule behaviour for specific scope
     project: { ... } // project scope config
 ] 
 ```
-
-### `max`
-Max allowed tags amount in *{scope}*
-
 <details>
     <summary>defaultValue</summary>
 
-    file: null
-    project: 32
+    {
+        file: null,
+        project: { ... }, // see below
+    }
 </details>
+
+
+### `max`
+Max allowed tags amount in *{scope}*
 
 ```js
 // specify max tags for project (or file) scope
@@ -92,6 +85,12 @@ Max allowed tags amount in *{scope}*
     project: { max: 24 }
 }]
 ```
+<details>
+    <summary>defaultValue</summary>
+
+    file: null
+    project: 32
+</details>
 
 ## When Not To Use It
 
