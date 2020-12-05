@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var rule = require("../../../lib/rules/max-tags"),
+const rule = require("../../../lib/rules/max-tags"),
 
     RuleTester = require("eslint").RuleTester;
 
@@ -20,7 +20,7 @@ var rule = require("../../../lib/rules/max-tags"),
 /**
  * @type {import("eslint").RuleTester}
  */
-const ruleTester = new RuleTester({ parserOptions: { ecmaVersion: 2018 }});
+const ruleTester = new RuleTester({ parserOptions: { ecmaVersion: 2018 } });
 ruleTester.run("max-tags", rule, {
 
     valid: [
@@ -45,19 +45,19 @@ ruleTester.run("max-tags", rule, {
             code: `
             /**
              * TODO: 1
-             * FIXME: 6
+             * FIXME: 1
              */
             function foo () {
                 console.log("some-code");
             }
-            // TODO: 2
+            // TODO: 3
             const capitalize = (str) => {
                 if (!str) return;
                 return str.charAt(0) + str.slice(1);
             }
-            /** TODO: 3 */
-            /* TODO: 4 */
-            // TODO: 5
+            /** TODO: 4 */
+            /* TODO: 5 */
+            // TODO: 6
             module.exports = {
                 capitalize: capitalize,
                 foo: foo,
@@ -65,8 +65,30 @@ ruleTester.run("max-tags", rule, {
             `,
             errors: [{
                 // FIXME: get template from one source?
-                message: "Occured 6 TODO/FIXME tags at file, but allowed only 4 per file.\nPlease, resolve some tags or move some task to your task-tracker",
-            }]
-        }
+                message: "At file occured 6 TODO/FIXME tags, but allowed only 4 - please, resolve or move some tasks to your task-tracker",
+            }],
+        },
+        {
+            code: Array(24).fill("").map(
+                () => "// TODO: ---"
+            ).join("\n"),
+            errors: [
+                { message: "At file occured 24 TODO/FIXME tags, but allowed only 4 - please, resolve or move some tasks to your task-tracker" },
+                // FIXME: get template from one source?
+                { message: "At project occured 35 TODO/FIXME tags, but allowed only 32 - please, resolve or move some tasks to your task-tracker" },
+            ],
+        },
+        {
+            code: `
+            // FIXME: fixme
+            // FIXME: fixme
+            // FIXME: fixme
+            // FIXME: fixme
+            // FIXME: fixme
+            `,
+            errors: [
+                { message: "At file occured 5 TODO/FIXME tags, but allowed only 4 - please, resolve or move some tasks to your task-tracker" },
+            ],
+        },
     ]
 });
