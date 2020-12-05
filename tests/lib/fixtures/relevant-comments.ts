@@ -26,7 +26,7 @@ const getSharedDictionaries = async () => {
      * some note
      * TODO: some todo
      */
-    const { data: schedules } = await API.getSchedules();
+    const { data: schedules } = await API.getSchedules().then((r) => r);
     const { data: vehicles } = await API.getVehicles();
     // FIXME: optimize
     const { data: issueStatuses } = await API.getIssueStatuses();
