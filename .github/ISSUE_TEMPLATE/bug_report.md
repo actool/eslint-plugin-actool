@@ -12,21 +12,31 @@ assignees: ''
 ## Version
 <!-- Specify version of plugin -->
 
+## Related
+- none
+<!-- Specify related rule / util / ... -->
+
 ## Behavior
 
-<!-- ### Expected
- A clear and concise description of what you expected to happen. -->
+<!-- 
+### Expected
+A clear and concise description of what you expected to happen.
+-->
 
-<!-- ### Actual
-A clear and concise description of what the bug is. -->
+<!-- 
+### Actual
+A clear and concise description of what the bug is.
+-->
 
-<!-- ### Repro steps
+<!-- 
+### Repro steps
 Steps to reproduce the behavior:
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
-4. See error -->
-<!-- **Expected behavior** -->
+4. See error 
+-->
+
 
 ## Additional context
 <!-- Add any other context about the problem here, any screenshots to help explain your problem -->
