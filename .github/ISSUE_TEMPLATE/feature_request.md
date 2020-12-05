@@ -10,11 +10,11 @@ assignees: ''
 <!-- ✨ Thanks for feature suggesting! ➡️ Please don't ignore this template -->
 
 **Problem**
-<!-- Describe related problem, if you have
+<!-- Describe related problem (or just note), if you have
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...] -->
 
 **Solution**
-<!-- Describe desired solution
+<!-- (Optional*) Describe desired solution
 A clear and concise description of what you want to happen. -->
 
 **Additional context**
