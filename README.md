@@ -17,9 +17,9 @@
 
 Actool rules for ESLint to validate code / comments actuality and relevance.
 
-- Control **TODOs chaos**
-- Control **comments actuality**
-- Control **rubbish code**
+- 🚀 Control **[TODOs chaos](/docs/overview.md/#todos-chaos)**
+- 🚀 Control **[comments actuality](/docs/overview.md/#comments-relevancy)**
+- 🚀 Control **[rubbish code](/docs/overview.md/#rubbish-code)**
 
 <!-- TODO [**Propose or contribute a new rule ➡**](.github/contributing.md) -->
 > **DISCLAIMER**: Work in process, and for a while - here is *approximate* description
@@ -27,65 +27,23 @@ Actool rules for ESLint to validate code / comments actuality and relevance.
 ## Table of contents
 
 <!--ts-->
-   * [Overview](#overview)
    * [Installation](#installation)
    * [Usage](#usage)
    * [Supported Rules](#supported-rules)
    * [Also](#also)
 <!--te-->
 
-## Overview
-> *"Code never lies, comments sometimes do." - Ron Jeffries*
-
-Actool provides tools **for validating comments** in code - *based on your config, code and commits history.*
-
-<!--TODO diff + ts highlighting -->
-
-Tool was conceived to solve following problems:
-
-#### Comments relevancy
-Comments for code block *loses their actuality fastly* - during developing (becomes *irrelevant*)
-```diff
- /**
-- * Get schedules from server
-  */
-+ const getSharedDictionaries = async () => {
-      const { data: schedules } = await API.getSchedules();
-+     const { data: vehicles } = await API.getVehicles();
-+     const { data: issueStatuses } = await API.getIssueStatuses();
-  }
-```
-#### Rubbish code
-Sometimes few parts of *code stay commented*. And after long time it might confuse you and your colleagues when you'll return to this block
-```diff
- return (
-     <div className="toolbar">
-         <Button onClick={handleRefresh}>Refresh</Button>
--        {/* <Button onClick={() => dispatch(deleteEntity()))}>Delete</Button> */}
--        {/* <Button onClick={handleAdd}>Add</Button> */}
-     </div>
- )
-```
-
-#### TODOS chaos
-After a while of your projects started - *there are a lot of `fixme` / `todo` tags*, what hard to control and track during dev
-```ts
-// TODO: loading logic
-// FIXME: temp logic, specify
-// FIXME: invalid behaviour, fix later
-```
-
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):
 
-```
+```sh
 $ npm i eslint --save-dev
 ```
 
 Next, install `eslint-plugin-actool`:
 
-```
+```sh
 $ npm install eslint-plugin-actool --save-dev
 ```
 
@@ -127,8 +85,7 @@ Then configure the rules you want to use under the rules section.
 - You want to participate in the development of the project? Have a look at our [contributing](CONTRIBUTING.md) guide!
    > Commit like nobody sees, Push like nobody hears
 - Found the bug / potential improvement ? [Let us know =)](https://github.com/actool/eslint-plugin-actool/issues)
-- [Team](DEV.md#team)
-- [Plans](DEV.md#plans)
-- [FAQ](FAQ.md)
-
-
+- [FAQ](/docs/faq.md)
+- [Overview](/docs/overview.md)
+- [How it work](/docs/how-it-work.md)
+- [Project plans](/docs/plans.md)
