@@ -15,7 +15,7 @@
 [r:max-tags]: https://github.com/actool/eslint-plugin-actool/tree/master/docs/rules/max-tags.md
 [r:relevant-comments]: https://github.com/actool/eslint-plugin-actool/tree/master/docs/rules/relevant-comments.md
 [r:no-commented-code]: https://github.com/actool/eslint-plugin-actool/tree/master/docs/rules/no-commented-code.md
-
+[issues]: https://github.com/actool/eslint-plugin-actool/issues
 
 ![Version](https://img.shields.io/github/package-json/v/actool/eslint-plugin-actool)
 ![npm](https://img.shields.io/npm/dw/eslint-plugin-actool)
@@ -104,7 +104,7 @@ $ npm install eslint-plugin-actool -g  # or install globally
 ## Also
 - You want to participate in the development of the project? Have a look at our [contributing][d:contributing] guide!
    > Commit like nobody sees, Push like nobody hears
-- Found the bug / potential improvement ? [Let us know =)](https://github.com/actool/eslint-plugin-actool/issues)
+- Found the bug / potential improvement ? [Let us know =)][issues]
 - [Overview][d:overview]
 - [How it work][d:howit]
 - [FAQ][d:faq]
