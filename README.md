@@ -1,5 +1,22 @@
 # [eslint-plugin-actool](https://www.npmjs.com/package/eslint-plugin-actool)
 
+<!-- FIXME: simplify -->
+<!-- see: https://gist.github.com/ChrisTollefson/a3af6d902a74a0afd1c2d79aadc9bb3f -->
+
+[d:contributing]: https://github.com/actool/eslint-plugin-actool/blob/master/CONTRIBUTING.md
+[d:howit]: https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md
+[d:faq]: https://github.com/actool/eslint-plugin-actool/blob/master/docs/faq.md
+[d:plans]: https://github.com/actool/eslint-plugin-actool/blob/master/docs/plans.md
+[d:overview]: https://github.com/actool/eslint-plugin-actool/blob/master/docs/overview.md
+[d:overview#todos]: https://github.com/actool/eslint-plugin-actool/blob/master/docs/overview.md#todos-chaos
+[d:overview#comments]: https://github.com/actool/eslint-plugin-actool/blob/master/docs/overview.md#comments-relevancy
+[d:overview#rubbish]: https://github.com/actool/eslint-plugin-actool/blob/master/docs/overview.md#rubbish-code
+[rules]: https://github.com/actool/eslint-plugin-actool/tree/master/docs/rules
+[r:max-tags]: https://github.com/actool/eslint-plugin-actool/tree/master/docs/rules/max-tags.md
+[r:relevant-comments]: https://github.com/actool/eslint-plugin-actool/tree/master/docs/rules/relevant-comments.md
+[r:no-commented-code]: https://github.com/actool/eslint-plugin-actool/tree/master/docs/rules/no-commented-code.md
+
+
 ![Version](https://img.shields.io/github/package-json/v/actool/eslint-plugin-actool)
 ![npm](https://img.shields.io/npm/dw/eslint-plugin-actool)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/eslint-plugin-actool)
@@ -17,9 +34,9 @@
 
 Actool rules for ESLint to validate code / comments actuality and relevance.
 
-- 💥 Control **[TODOs chaos](/docs/overview.md#todos-chaos)**
-- ⏲️ Control **[comments actuality](/docs/overview.md#comments-relevancy)**
-- ☢️ Control **[rubbish code](/docs/overview.md#rubbish-code)**
+- 💥 Control **[TODOs chaos][d:overview#todos]**
+- ⏲️ Control **[comments actuality][d:overview#comments]**
+- ☢️ Control **[rubbish code][d:overview#rubbish]**
 
 <!-- TODO [**Propose or contribute a new rule ➡**](.github/contributing.md) -->
 > **DISCLAIMER**: Work in process, and for a while - here is *approximate* description
@@ -37,7 +54,7 @@ Actool rules for ESLint to validate code / comments actuality and relevance.
 ## Usage
 > **Requirement:** Make sure your repository has *git history*
 
-* 💫 Refer to our [overiew doc](/docs/overview.md) for **quick explanation of features and conception**
+* 💫 Refer to our [overiew doc][d:overview] for **quick explanation of features and conception**
 * If you don't have ESLint yet configured for your project, follow [these instructions](https://github.com/eslint/eslint#installation-and-usage).
 * Install `eslint-plugin-actool` using `npm` (or `yarn`) for you project or globally:
 
@@ -76,19 +93,19 @@ $ npm install eslint-plugin-actool -g  # or install globally
 
 ## Rules
 
-- [`max-tags`](docs/rules/max-tags.md) - limit TODO/FIXME tags
+- [`max-tags`][r:max-tags] - limit TODO/FIXME tags
    > scope: *file*, *project*
-- [`relevant-comments`](docs/rules/relevant-comments.md) - validate relevanting of comment doclet with corresponding code statement
+- [`relevant-comments`][r:relevant-comments] - validate relevanting of comment doclet with corresponding code statement
    > scope: *line*, *block*, *module*
-- [`no-commented-code`](docs/rules/no-commented-code.md) - limit commented code usage and storing
+- [`no-commented-code`][r:no-commented-code] - limit commented code usage and storing
 
-> [More details](/docs/how-it-work.md)
+> [More details][d:howit]
 
 ## Also
-- You want to participate in the development of the project? Have a look at our [contributing](CONTRIBUTING.md) guide!
+- You want to participate in the development of the project? Have a look at our [contributing][d:contributing] guide!
    > Commit like nobody sees, Push like nobody hears
 - Found the bug / potential improvement ? [Let us know =)](https://github.com/actool/eslint-plugin-actool/issues)
-- [Overview](/docs/overview.md)
-- [How it work](/docs/how-it-work.md)
-- [FAQ](/docs/faq.md)
-- [Project plans](/docs/plans.md)
+- [Overview][d:overview]
+- [How it work][d:howit]
+- [FAQ][d:faq]
+- [Project plans][d:plans]
