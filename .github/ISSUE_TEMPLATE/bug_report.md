@@ -28,5 +28,5 @@ Steps to reproduce the behavior:
 4. See error -->
 <!-- **Expected behavior** -->
 
-**Additional context**
+## Additional context
 <!-- Add any other context about the problem here, any screenshots to help explain your problem -->
