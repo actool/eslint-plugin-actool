@@ -29,48 +29,47 @@ Actool rules for ESLint to validate code / comments actuality and relevance.
 ## Table of contents
 
 <!--ts-->
-   * [Installation](#installation)
    * [Usage](#usage)
    * [Supported Rules](#supported-rules)
    * [Also](#also)
 <!--te-->
 
-## Installation
-
-You'll first need to install [ESLint](http://eslint.org):
-
-```sh
-$ npm i eslint --save-dev
-```
-
-Next, install `eslint-plugin-actool`:
-
-```sh
-$ npm install eslint-plugin-actool --save-dev
-```
-
-
 ## Usage
 > **Requirement:** Make sure your repository have the *git history*
 
-Add `actool` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+* If you don't have ESLint yet configured for your project, follow [these instructions](https://github.com/eslint/eslint#installation-and-usage).
+* Install `eslint-plugin-actool` using `npm` (or `yarn`) for you project or globally:
+
+```sh
+npm install eslint-plugin-actool --save-dev # install for your project
+npm install eslint-plugin-actool -g         # or install globally
+```
+
+* Add `eslint-plugin-actool` to the `plugins` option of your `.eslintrc`:
 
 ```json
 {
-    "plugins": [
-        "actool"
-    ]
+  "plugins": ["actool"]
 }
 ```
 
-
-Then configure the rules you want to use under the rules section.
+* **(WIP)** Add `plugin:actool/recommended` to the `extends` option to enable all recommended rules:
 
 ```json
 {
-    "rules": {
-        "actool/rule-name": 2
-    }
+  "extends": ["plugin:actool/recommended"]
+}
+```
+
+* or enable only some rules manually:
+
+```js
+{
+  "rules": {
+    "actool/max-tags": 2,
+    "actool/relevant-comments": 2,
+    // etc.
+  }
 }
 ```
 
