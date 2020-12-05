@@ -17,9 +17,9 @@
 
 Actool rules for ESLint to validate code / comments actuality and relevance.
 
-- 🚀 Control **[TODOs chaos](/docs/overview.md#todos-chaos)**
-- 🚀 Control **[comments actuality](/docs/overview.md#comments-relevancy)**
-- 🚀 Control **[rubbish code](/docs/overview.md#rubbish-code)**
+- 💥 Control **[TODOs chaos](/docs/overview.md#todos-chaos)**
+- ⏲️ Control **[comments actuality](/docs/overview.md#comments-relevancy)**
+- ☢️ Control **[rubbish code](/docs/overview.md#rubbish-code)**
 
 <!-- TODO [**Propose or contribute a new rule ➡**](.github/contributing.md) -->
 > **DISCLAIMER**: Work in process, and for a while - here is *approximate* description
