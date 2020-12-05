@@ -48,7 +48,7 @@ $ npm install eslint-plugin-actool -g  # or install globally
 
 * Add `eslint-plugin-actool` to the `plugins` option of your `.eslintrc`:
 
-```json
+```js
 {
   "plugins": ["actool"]
 }
@@ -56,7 +56,7 @@ $ npm install eslint-plugin-actool -g  # or install globally
 
 * **(WIP)** Add `plugin:actool/recommended` to the `extends` option to enable all recommended rules:
 
-```json
+```js
 {
   "extends": ["plugin:actool/recommended"]
 }
