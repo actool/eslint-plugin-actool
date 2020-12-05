@@ -2,7 +2,7 @@
 name: Bug report
 about: A rule isn't working as it should?
 title: ''
-labels: bug
+labels: new, bug
 assignees: ''
 
 ---

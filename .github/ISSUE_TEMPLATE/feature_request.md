@@ -1,8 +1,8 @@
 ---
 name: Feature Request
-about: Something should be enhanced / implemented?
+about: Have a new lint-example or other idea of linting process? Something should be enhanced / implemented?
 title: ''
-labels: enhancement
+labels: new, enhancement
 assignees: ''
 
 ---

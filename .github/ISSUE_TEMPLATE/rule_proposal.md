@@ -2,7 +2,7 @@
 name: Rule proposal
 about: Have an idea for a new rule?
 title: ''
-labels: enhancement, evaluating, new rule
+labels: new rule, new, enhancement
 assignees: ''
 
 ---

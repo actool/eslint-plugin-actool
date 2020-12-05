@@ -2,7 +2,7 @@
 name: Assignment
 about: Some common issue
 title: ''
-labels: assignment
+labels: new, assignment
 assignees: ''
 
 ---
