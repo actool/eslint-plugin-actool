@@ -1,4 +1,4 @@
-# WIP: `max-tags`
+# `max-tags`
 
 Limit TODO/FIXME tags amount in file
 
@@ -54,8 +54,6 @@ This rule aims to limit TODO/FIXME tags amount in file
 ```
 
 ## Options
-
-> **WIP**: For a while - aren't available
 
 ### `scope`
 Controls the rule behaviour for specific scope
