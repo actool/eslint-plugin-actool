@@ -24,6 +24,8 @@ Actool rules for ESLint to validate code / comments actuality and relevance.
 <!-- TODO [**Propose or contribute a new rule ➡**](.github/contributing.md) -->
 > **DISCLAIMER**: Work in process, and for a while - here is *approximate* description
 
+> Refer to our [overiew doc](/docs/overview.md) for quick explanation of features and motivation
+
 ## Table of contents
 
 <!--ts-->

@@ -42,7 +42,9 @@ After a while of your projects started - *there are a lot of `fixme` / `todo` ta
 ```
 
 ## Conception
-Long time it was open question - <u>"User receive "actool/..." alert but how can he (or she) can fix it?</u>
+Long time it was open question
+
+> User receive "actool/..." alert but how can he (or she) can fix it?
 
 We stick the idea, that **developer should update comments often as possible**
 
