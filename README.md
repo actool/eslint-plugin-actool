@@ -26,13 +26,15 @@ Actool rules for ESLint to validate code / comments actuality and relevance.
 
 > **GET STARTED:** Refer to our [overiew doc](/docs/overview.md) for quick explanation of features and motivation
 
+<!-- NOTE: uncomment later if needed
 ## Table of contents
 
-<!--ts-->
+<!--ts-- >
    * [Usage](#usage)
    * [Rules](#rules)
    * [Also](#also)
-<!--te-->
+<!--te-- > 
+-->
 
 ## Usage
 > **Requirement:** Make sure your repository have the *git history*
