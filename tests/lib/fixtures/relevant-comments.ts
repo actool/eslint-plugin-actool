@@ -1,6 +1,7 @@
 type DictionariesAPI = {
     getSchedules: () => any;
     getVehicles: () => any;
+    /** Method comment */
     getIssueStatuses: () => any;
 }
 
@@ -21,8 +22,13 @@ function processData(some: any) {
  * Get schedules from server
  */
 const getSharedDictionaries = async () => {
+    /**
+     * some note
+     * TODO: some todo
+     */
     const { data: schedules } = await API.getSchedules();
     const { data: vehicles } = await API.getVehicles();
+    // FIXME: optimize
     const { data: issueStatuses } = await API.getIssueStatuses();
 
     return {
