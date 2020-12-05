@@ -11,7 +11,7 @@ Limit commented code usage and storing
 
 ## Rule Details
 
-This rule aims to control [commented code](https://github.com/actool/eslint-plugin-actool#rubbish-code) in your project
+This rule aims to control [commented code](https://github.com/actool/eslint-plugin-actool/blob/master/docs/overview.md/#rubbish-code) in your project
 
 ```js
 // commented code lastCommit: A 
@@ -102,6 +102,6 @@ If you no need to keep commented code
 
 ## Further reading
 - https://github.com/actool/eslint-plugin-actool/issues/39
-- https://github.com/actool/eslint-plugin-actool#rubbish-code
+- https://github.com/actool/eslint-plugin-actool/blob/master/docs/overview.md/#rubbish-code)
 
 <!-- TODO: add links about problem -->

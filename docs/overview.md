@@ -1,4 +1,6 @@
 # Overview
+
+## Motivation
 > *"Code never lies, comments sometimes do." - Ron Jeffries*
 
 Actool provides tools **for validating comments** in code - *based on your config, code and commits history.*
@@ -38,3 +40,11 @@ After a while of your projects started - *there are a lot of `fixme` / `todo` ta
 // FIXME: temp logic, specify
 // FIXME: invalid behaviour, fix later
 ```
+
+## Conception
+Long time it was open question - *"User receive `actool/...` alert but how can he (or she) can fix it?*
+
+We stick the idea, that **developer should update comments often as possible**
+
+Cause of it - every alert *suggests* you to refresh your comment content
+> Just update your comment any rational method

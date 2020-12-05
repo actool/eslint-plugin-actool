@@ -104,6 +104,6 @@ In cases, when growing of TODO/FIXME tags isn't problem for your project or when
 ## Further Reading
 
 - https://github.com/actool/eslint-plugin-actool/issues/16
-- https://github.com/actool/eslint-plugin-actool#todos-chaos
+- https://github.com/actool/eslint-plugin-actool/blob/master/docs/overview.md#todos-chaos)
 
 <!-- TODO: add links to TODO/FIXME chaos problem -->

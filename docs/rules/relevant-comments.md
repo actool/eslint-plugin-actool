@@ -113,13 +113,12 @@ If no need to keep comments in actual state with corresponding code
 
 ## FAQ
 ### I have `actool/relevant-comments` alert but how can I fix it?
-We stick the idea, that **developer should update comments often as possible**
+Refer to our [conception explaining](https://github.com/actool/eslint-plugin-actool/blob/master/docs/overview.md/#conception)
 
-Cause of it - every alert *suggests* you to refresh your comment content
-> Just update your comment any rational method
+> **TL;DR:** Just update your comment any rational method
 
 ## Further Reading
 - https://github.com/actool/eslint-plugin-actool/issues/25
-- https://github.com/actool/eslint-plugin-actool#comments-relevancy
+- https://github.com/actool/eslint-plugin-actool/blob/master/docs/overview.md#comments-relevancy)
 
 <!-- TODO: add links about problem -->

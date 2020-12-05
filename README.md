@@ -17,9 +17,9 @@
 
 Actool rules for ESLint to validate code / comments actuality and relevance.
 
-- 🚀 Control **[TODOs chaos](/docs/overview.md/#todos-chaos)**
-- 🚀 Control **[comments actuality](/docs/overview.md/#comments-relevancy)**
-- 🚀 Control **[rubbish code](/docs/overview.md/#rubbish-code)**
+- 🚀 Control **[TODOs chaos](/docs/overview.md#todos-chaos)**
+- 🚀 Control **[comments actuality](/docs/overview.md#comments-relevancy)**
+- 🚀 Control **[rubbish code](/docs/overview.md#rubbish-code)**
 
 <!-- TODO [**Propose or contribute a new rule ➡**](.github/contributing.md) -->
 > **DISCLAIMER**: Work in process, and for a while - here is *approximate* description
@@ -85,7 +85,7 @@ Then configure the rules you want to use under the rules section.
 - You want to participate in the development of the project? Have a look at our [contributing](CONTRIBUTING.md) guide!
    > Commit like nobody sees, Push like nobody hears
 - Found the bug / potential improvement ? [Let us know =)](https://github.com/actool/eslint-plugin-actool/issues)
-- [FAQ](/docs/faq.md)
 - [Overview](/docs/overview.md)
 - [How it work](/docs/how-it-work.md)
+- [FAQ](/docs/faq.md)
 - [Project plans](/docs/plans.md)
