@@ -30,7 +30,7 @@ Actool rules for ESLint to validate code / comments actuality and relevance.
 
 <!--ts-->
    * [Usage](#usage)
-   * [Supported Rules](#supported-rules)
+   * [Rules](#rules)
    * [Also](#also)
 <!--te-->
 
@@ -73,7 +73,7 @@ npm install eslint-plugin-actool -g         # or install globally
 }
 ```
 
-## Supported Rules
+## Rules
 
 - [`max-tags`](docs/rules/max-tags.md) - limit TODO/FIXME tags
    > scope: *file*, *project*
