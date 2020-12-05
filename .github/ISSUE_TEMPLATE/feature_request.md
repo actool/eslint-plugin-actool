@@ -9,13 +9,13 @@ assignees: ''
 
 <!-- ✨ Thanks for feature suggesting! ➡️ Please don't ignore this template -->
 
-**Problem**
+**Problem** <!-- or **Note**-->
 <!-- Describe related problem (or just note), if you have
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...] -->
 
-**Solution**
-<!-- (Optional*) Describe desired solution
+**Solution (optional)**
+<!-- Describe desired solution
 A clear and concise description of what you want to happen. -->
 
-**Additional context**
+**Additional context (optional)**
 <!-- Add any other context or screenshots about the feature request here, maybe - alternatives you've considered. -->
