@@ -1,6 +1,6 @@
 ---
 name: Feature Request
-about: Have a new lint-example or other idea of linting process? Something should be enhanced / implemented?
+about: Have some example / idea / note / enhancement for linting?
 title: ''
 labels: new, enhancement
 assignees: ''
