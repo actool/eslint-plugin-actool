@@ -71,7 +71,7 @@ $ npm install eslint-plugin-actool -g  # or install globally
 }
 ```
 
-* **(WIP)** Add `plugin:actool/recommended` to the `extends` option to enable all recommended rules:
+* Add `plugin:actool/recommended` to the `extends` option to enable all recommended rules:
 
 ```js
 {
