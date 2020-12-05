@@ -35,9 +35,9 @@ Actool rules for ESLint to validate code / comments actuality and relevance.
 -->
 
 ## Usage
-> **Requirement:** Make sure your repository have the *git history*
+> **Requirement:** Make sure your repository has *git history*
 
-* Refer to our [overiew doc](/docs/overview.md) for **quick explanation of features and conception**
+* 💫 Refer to our [overiew doc](/docs/overview.md) for **quick explanation of features and conception**
 * If you don't have ESLint yet configured for your project, follow [these instructions](https://github.com/eslint/eslint#installation-and-usage).
 * Install `eslint-plugin-actool` using `npm` (or `yarn`) for you project or globally:
 
