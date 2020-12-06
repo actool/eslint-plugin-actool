@@ -25,7 +25,8 @@
     "test:git": "node lib/rules/utils/git-access.js"
   },
   "dependencies": {
-    "requireindex": "~1.1.0"
+    "requireindex": "~1.1.0",
+    "sinon": "^9.2.1"
   },
   "devDependencies": {
     "@types/eslint": "^7.2.6",
