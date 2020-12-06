@@ -29,7 +29,7 @@ const getSharedDictionaries = async () => {
     const { data: schedules } = await API.getSchedules().then((r) => r);
     const { data: vehicles } = await API.getVehicles();
     // FIXME: optimize
-    const { data: issueStatuses } = await API.getIssueStatuses().then((r) => r);
+    const { data: issueStatuses } = await API.getIssueStatuses().then(r => r);
 
     return {
         schedules: processData(schedules),
