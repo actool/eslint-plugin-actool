@@ -41,6 +41,9 @@ Actool rules for ESLint to validate code / comments actuality and relevance.
 <!-- TODO [**Propose or contribute a new rule ➡**](.github/contributing.md) -->
 > **DISCLAIMER**: Work in process, and for a while - here is *approximate* description
 
+> **DISCLAIMER**: Work in process, and cause of it - there are a lot of bugs =)
+> First stable version will be signed as **0.1.0**
+
 <!-- NOTE: uncomment later if needed
 ## Table of contents
 
