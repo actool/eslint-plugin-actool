@@ -2,8 +2,8 @@ name: Test current bulid
 on: push
 jobs:
   test_build:
-    runs-on: ubuntu-latest
-    timeout-minutes: 12
+    runs-on: windows-latest
+    timeout-minutes: 6
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
