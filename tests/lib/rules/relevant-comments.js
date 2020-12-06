@@ -114,20 +114,14 @@ ruleTester.run("relevant-comments", rule, {
             code: relevantCommentsCode,
             filename: "tests/lib/fixtures/relevant-comments.ts",
             errors: [
-                {
-                    message: 'At block [22-24] occured inrelevant comment block by 119 commits',
-                    line: 22,
-                    column: 1,
-                    endLine: 24,
-                    endColumn: 4
-                },
-                {
-                    message: 'At line 32 occured inrelevant comment by 1 commits',
-                    line: 33,
-                    column: 5,
-                    endLine: 33,
-                    endColumn: 10
-                },
+                { message: 'For line 5 occurred irrelevant comment by 6 min' },
+                { message: 'For block [9-9] occurred irrelevant comment by 3 min' },
+                { message: 'For block [12-14] occurred irrelevant comment by 4 min' },
+                { message: 'For block [22-24] occurred irrelevant comment by 126 commits' },
+                { message: 'For block [22-24] occurred irrelevant comment by 45 min' },
+                { message: 'For line 29 occurred irrelevant comment by 30 min' },
+                { message: 'For line 32 occurred irrelevant comment by 8 commits' },
+                { message: 'For line 32 occurred irrelevant comment by 42 min' },
             ]
         },
     ],
