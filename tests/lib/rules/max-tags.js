@@ -70,7 +70,7 @@ ruleTester.run("max-tags", rule, {
             options: [
                 {
                     project: { disabled: true },
-                    file: { max: 3 },
+                    file: { max: 6 },
                 }
             ]
         },
