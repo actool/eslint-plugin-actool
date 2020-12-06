@@ -100,8 +100,8 @@ let foo = function() {  // this function isn't, but with `block` option would be
 const getSharedDictionaries = () => {  // code block lastCommit: **commit2**
 ```
 ```js
-validateDiff(commit1: Commit, commit2: Commit, diff: number): boolean
-validateDiff(date1: Date, date2: Date, diff: number): boolean
+validateDiffByCommits(commit1: Commit, commit2: Commit, diff: number): boolean
+validateDiffByDates(date1: Date, date2: Date, diff: number): boolean
 ```
 
 <a href="https://ibb.co/kKQVqYw"><img src="https://i.ibb.co/kKQVqYw/67538-Image-889x474-Color.png" alt="67538-Image-889x474-Color" border="0"></a>
@@ -111,12 +111,12 @@ validateDiff(date1: Date, date2: Date, diff: number): boolean
 By history intermediate commits
 
 ```js
-if (validateDiff(commit1, commit2, diff)
+if (validateDiffByCommits(commit1, commit2, diff)
 ```
 
 #### Days (experimental)
 By trivial days comparsion
 
 ```js
-if (validateDiff(commit1.date, commit2.date, diff))
+if (validateDiffByDates(commit1.date, commit2.date, diff))
 ```
