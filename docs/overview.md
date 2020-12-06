@@ -21,6 +21,9 @@ Comments for code block *loses their actuality fastly* - during developing (beco
 +     const { data: issueStatuses } = await API.getIssueStatuses();
   }
 ```
+
+> Related rules: [`relevant-comments`](https://github.com/actool/eslint-plugin-actool/blob/master/docs/rules/relevant-comments.md)
+
 ### Rubbish code
 Sometimes few parts of *code stay commented*. And after long time it might confuse you and your colleagues when you'll return to this block
 ```diff
@@ -33,6 +36,8 @@ Sometimes few parts of *code stay commented*. And after long time it might confu
  )
 ```
 
+> Related rules: [`no-commented-code`](https://github.com/actool/eslint-plugin-actool/blob/master/docs/rules/no-commented-code.md)
+
 ### TODOS chaos
 After a while of your projects started - *there are a lot of `fixme` / `todo` tags*, what hard to control and track during dev
 ```ts
@@ -40,6 +45,8 @@ After a while of your projects started - *there are a lot of `fixme` / `todo` ta
 // FIXME: temp logic, specify
 // FIXME: invalid behaviour, fix later
 ```
+
+> Related rules: [`max-tags`](https://github.com/actool/eslint-plugin-actool/blob/master/docs/rules/max-tags.md)
 
 ## Conception
 Long time it was open question
