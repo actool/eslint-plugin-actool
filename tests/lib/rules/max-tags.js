@@ -67,6 +67,12 @@ ruleTester.run("max-tags", rule, {
                 // FIXME: get template from one source?
                 message: "At file occured 6 TODO/FIXME tags, but allowed only 4 - please, resolve or move some tasks to your task-tracker",
             }],
+            options: [
+                {
+                    project: { disabled: true },
+                    file: { max: 3 },
+                }
+            ]
         },
         {
             code: Array(24).fill("").map(
