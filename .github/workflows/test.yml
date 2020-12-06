@@ -2,7 +2,7 @@ name: Test current bulid
 on: push
 jobs:
   test_build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 6
     steps:
       - name: Checkout Repository

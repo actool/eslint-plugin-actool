@@ -21,6 +21,7 @@
 ![npm](https://img.shields.io/npm/dw/eslint-plugin-actool)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/eslint-plugin-actool)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Factool%2Feslint-plugin-actool&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/actool/eslint-plugin-actool/Test%20current%20bulid?label=tests)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/actool/eslint-plugin-actool)
 <!-- ![GitHub top language](https://img.shields.io/github/languages/top/actool/eslint-plugin-actool) -->
 <!-- [![GitHub license](https://img.shields.io/github/license/actool/eslint-plugin-actool)](https://github.com/actool/eslint-plugin-actool/blob/master/LICENSE) -->
