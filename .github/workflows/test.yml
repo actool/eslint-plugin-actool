@@ -4,6 +4,9 @@ jobs:
   test_build:
     runs-on: ubuntu-latest
     timeout-minutes: 6
+    strategy:
+      matrix:
+        node-version: [ '10', '12' ]
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
