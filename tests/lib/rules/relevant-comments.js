@@ -17,7 +17,6 @@ const rule = require("../../../lib/rules/relevant-comments"),
 // Tests
 //------------------------------------------------------------------------------
 
-const defaultCode = "console.log('...')";
 // TODO: get code by filename later
 const relevantCommentsCode = `
 type DictionariesAPI = {
@@ -67,6 +66,33 @@ const getSharedDictionaries = async () => {
  */
 `
 
+// FIXME: temp
+const cmdProcessorFilecontent = `
+const { get } = require('http');
+const { resolve } = require('path');
+
+var exec = require('child_process').exec;
+
+
+module.exports = async function execCommand(command) {
+    return new Promise(function (resolve, reject) {
+        exec(
+            'pwd',
+            {
+                cwd: '/home/comp/Documents/Learn/WebLab/eslint-plugin-actool'
+            },
+            function (err, stdout, stderr) {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve({ stdout, stderr })
+                }
+        });
+    });
+    
+}
+`
+
 /**
  * @type {import("eslint").RuleTester}
  */
@@ -78,18 +104,10 @@ const ruleTester = new RuleTester({
 
 ruleTester.run("relevant-comments", rule, {
     valid: [
-        // {
-        //     code: defaultCode,
-        //     filename: "lib/rules/max-tags.js",
-        // },
-        // {
-        //     code: defaultCode,
-        //     filename: "docs/rules/max-tags.md",
-        // },
-        // {
-        //     code: defaultCode,
-        //     filename: "S:/work/com.megapolis/.proj/rms/src/app/store/index.ts",
-        // }
+        {
+            code: cmdProcessorFilecontent,
+            filename: "lib/processors/cmd_processor.js",
+        },
     ],
     invalid: [
         {
@@ -97,20 +115,20 @@ ruleTester.run("relevant-comments", rule, {
             filename: "tests/lib/fixtures/relevant-comments.ts",
             errors: [
                 {
-                    message: 'Occured inrelevant comment block',
-                    line: 8,
+                    message: 'At block [22-24] occured inrelevant comment block by 119 commits',
+                    line: 22,
                     column: 1,
-                    endLine: 8,
-                    endColumn: 19
-                }
+                    endLine: 24,
+                    endColumn: 4
+                },
+                {
+                    message: 'At line 32 occured inrelevant comment by 1 commits',
+                    line: 33,
+                    column: 5,
+                    endLine: 33,
+                    endColumn: 10
+                },
             ]
         },
-        /* {
-            code: defaultCode,
-            filename: "...",
-            errors: [
-                
-            ]
-        } */
     ],
 });

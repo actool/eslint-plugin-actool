@@ -19,7 +19,7 @@
     "publish:patch": "npm version patch && npm publish",
     "publish:minor": "npm version minor && npm publish",
     "publish:major": "npm version major && npm publish",
-    "test": "mocha tests --recursive",
+    "test": "mocha tests --recursive --timeout 5000",
     "new:rule": "yo eslint:rule",
     "hist": "node ",
     "test:git": "node lib/rules/utils/git-access.js"
