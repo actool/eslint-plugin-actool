@@ -1,7 +1,7 @@
 name: Test current bulid
 on: push
 jobs:
-  build_and_preview:
+  test_build:
     runs-on: ubuntu-latest
     timeout-minutes: 12
     steps:
