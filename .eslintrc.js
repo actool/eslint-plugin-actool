@@ -16,8 +16,13 @@ module.exports = {
         node: true,
         mocha: true,
     },
-    plugins: [],
-    extends: ["eslint:recommended", "plugin:prettier/recommended", "prettier"],
+    plugins: ["eslint-plugin"],
+    extends: [
+        "eslint:recommended",
+        "plugin:prettier/recommended",
+        "prettier",
+        "plugin:eslint-plugin/all",
+    ],
     rules: {
         // variables
         "prefer-const": 2,
@@ -40,5 +45,7 @@ module.exports = {
         "arrow-parens": [2, "always"],
         "prefer-arrow-callback": 2,
         // TODO: add other plugins (unicorn, ...)
+        // plugin: eslint-plugin
+        "eslint-plugin/prefer-output-null": 0,
     },
 };

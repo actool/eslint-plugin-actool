@@ -29,7 +29,6 @@ ruleTester.run("relevant-comments", rule, {
     valid: [getFileFixture("tests/lib/fixtures/component.tsx")],
     invalid: [
         {
-            ...getFileFixture("tests/lib/fixtures/relevant-comments.ts"),
             errors: [
                 { message: "For line 5 occurred irrelevant comment by 6 min" },
                 { message: "For block [8-8] occurred irrelevant comment by 3 min" },
@@ -40,6 +39,7 @@ ruleTester.run("relevant-comments", rule, {
                 { message: "For line 32 occurred irrelevant comment by 8 commits" },
                 { message: "For line 32 occurred irrelevant comment by 42 min" },
             ],
+            ...getFileFixture("tests/lib/fixtures/relevant-comments.ts"),
         },
     ],
 });
