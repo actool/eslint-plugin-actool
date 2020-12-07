@@ -31,7 +31,10 @@
     "@types/eslint": "^7.2.6",
     "@typescript-eslint/parser": "^4.8.2",
     "eslint": "^7.1.0",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-prettier": "^3.2.0",
     "mocha": "^7.2.0",
+    "prettier": "^2.2.1",
     "typescript": "^4.1.2",
     "yo": "^3.1.1"
   },
