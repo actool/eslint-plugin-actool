@@ -17,9 +17,9 @@ const { lineRevisionFullData } = require("../fixtures/data/revisions");
 
 // TEST parseLineRevision
 
-describe("revision >> parseLineRevision", function () {
-    it("by fixtures", function () {
-        lineRevisionFullData.forEach(function ({ line, data }) {
+describe("revision >> parseLineRevision", () => {
+    it("by fixtures", () => {
+        lineRevisionFullData.forEach(({ line, data }) => {
             const d = revision.parseLineRevision(line);
             assert.deepStrictEqual(d, data);
         });

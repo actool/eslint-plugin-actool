@@ -38,6 +38,7 @@ module.exports = {
         "max-params": [1, 2],
         "max-lines-per-function": [1, 100],
         "arrow-parens": [2, "always"],
+        "prefer-arrow-callback": 2,
         // TODO: add other plugins (unicorn, ...)
     },
 };

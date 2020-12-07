@@ -25,7 +25,7 @@ const validateDaysTests = [
 
 describe("validate >> validateDiff", () => {
     it("by dates", () => {
-        validateDaysTests.forEach(function ({ date1, date2, diff, result }) {
+        validateDaysTests.forEach(({ date1, date2, diff, result }) => {
             assert.deepStrictEqual(result, validateDiffByDates(date1, date2, diff));
         });
     });
