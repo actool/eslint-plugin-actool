@@ -22,7 +22,9 @@
     "test": "mocha tests --recursive --timeout 5000",
     "new:rule": "yo eslint:rule",
     "hist": "node ",
-    "test:git": "node lib/rules/utils/git-access.js"
+    "test:git": "node lib/rules/utils/git-access.js",
+    "lint:test": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "requireindex": "~1.1.0"

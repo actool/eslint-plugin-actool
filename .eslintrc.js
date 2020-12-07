@@ -14,6 +14,7 @@ module.exports = {
         es6: true,
         amd: true,
         node: true,
+        mocha: true,
     },
     plugins: [],
     extends: ["eslint:recommended", "plugin:prettier/recommended", "prettier"],
@@ -35,7 +36,7 @@ module.exports = {
         "no-eq-null": 2,
         // function
         "max-params": [1, 2],
-        "max-lines-per-function": [1, 48],
+        "max-lines-per-function": [1, 100],
         "arrow-parens": [2, "always"],
         // TODO: add other plugins (unicorn, ...)
     },
