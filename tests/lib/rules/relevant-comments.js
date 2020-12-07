@@ -26,7 +26,7 @@ const ruleTester = new RuleTester({
 });
 
 ruleTester.run("relevant-comments", rule, {
-    valid: [getFileFixture("lib/processors/cmd_processor.js")],
+    valid: [getFileFixture("tests/lib/fixtures/component.tsx")],
     invalid: [
         {
             ...getFileFixture("tests/lib/fixtures/relevant-comments.ts"),

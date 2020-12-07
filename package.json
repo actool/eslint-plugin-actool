@@ -19,10 +19,10 @@
     "publish:patch": "npm version patch && npm publish",
     "publish:minor": "npm version minor && npm publish",
     "publish:major": "npm version major && npm publish",
-    "test": "mocha tests --recursive --timeout 5000",
     "new:rule": "yo eslint:rule",
-    "hist": "node ",
-    "test:git": "node lib/rules/utils/git-access.js",
+    "test": "npm run mocha:utils && npm run mocha:rules && npm run lint:test",
+    "mocha:rules": "mocha tests/lib/rules/** --timeout 5000",
+    "mocha:utils": "mocha tests/lib/utils/**",
     "lint:test": "eslint .",
     "lint:fix": "eslint . --fix"
   },
