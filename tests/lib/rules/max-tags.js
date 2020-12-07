@@ -16,6 +16,20 @@ const rule = require("../../../lib/rules/max-tags"),
 //------------------------------------------------------------------------------
 
 /**
+ * Get rule message
+ * @param {{
+ *  scope: "file" | "project"
+ *  occurred: number,
+ *  max: number
+ * }} arg
+ * FIXME: get from rule meta?
+ */
+const getMessage = ({ scope, occurred, max }) => {
+    // eslint-disable-next-line max-len
+    return `At ${scope} occured ${occurred} TODO/FIXME tags, but allowed only ${max} - please, resolve or move some tasks to your task-tracker`;
+};
+
+/**
  * @type {import("eslint").RuleTester}
  */
 const ruleTester = new RuleTester({ parserOptions: { ecmaVersion: 2018 } });
@@ -60,13 +74,7 @@ ruleTester.run("max-tags", rule, {
                 foo: foo,
             };
             `,
-            errors: [
-                {
-                    // FIXME: get template from one source?
-                    message:
-                        "At file occured 6 TODO/FIXME tags, but allowed only 4 - please, resolve or move some tasks to your task-tracker",
-                },
-            ],
+            errors: [{ message: getMessage({ scope: "file", occurred: 6, max: 4 }) }],
         },
         {
             code: Array(24)
@@ -74,15 +82,8 @@ ruleTester.run("max-tags", rule, {
                 .map(() => "// TODO: ---")
                 .join("\n"),
             errors: [
-                {
-                    message:
-                        "At file occured 24 TODO/FIXME tags, but allowed only 4 - please, resolve or move some tasks to your task-tracker",
-                },
-                // FIXME: get template from one source?
-                {
-                    message:
-                        "At project occured 35 TODO/FIXME tags, but allowed only 32 - please, resolve or move some tasks to your task-tracker",
-                },
+                { message: getMessage({ scope: "file", occurred: 24, max: 4 }) },
+                { message: getMessage({ scope: "project", occurred: 35, max: 32 }) },
             ],
         },
         {
@@ -93,12 +94,7 @@ ruleTester.run("max-tags", rule, {
             // FIXME: fixme
             // FIXME: fixme
             `,
-            errors: [
-                {
-                    message:
-                        "At file occured 5 TODO/FIXME tags, but allowed only 4 - please, resolve or move some tasks to your task-tracker",
-                },
-            ],
+            errors: [{ message: getMessage({ scope: "file", occurred: 5, max: 4 }) }],
         },
     ],
 });
