@@ -45,6 +45,12 @@ ruleTester.run("relevant-comments", rule, {
     valid: [getFileFixture("tests/lib/fixtures/component.tsx")],
     invalid: [
         {
+            options: [
+                {
+                    line: { disabled: false },
+                    module: { disabled: false },
+                },
+            ],
             errors: [
                 getMessage("5", "6").lineMin,
                 getMessage("[8-8]", "3").blockMin,
