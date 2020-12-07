@@ -17,6 +17,8 @@ const rule = require("../../../lib/rules/max-tags"),
 
 const { ERROR_MAX } = rule.MESSAGES;
 
+const getMessage = (data) => ({ messageId: ERROR_MAX, data });
+
 /**
  * @type {import("eslint").RuleTester}
  */
@@ -68,12 +70,7 @@ ruleTester.run("max-tags", rule, {
             //         file: { max: 6 },
             //     },
             // ],
-            errors: [
-                {
-                    messageId: ERROR_MAX,
-                    data: { scope: "file", actual: 6, max: 4 },
-                },
-            ],
+            errors: [getMessage({ scope: "file", actual: 6, max: 4 })],
         },
         {
             code: Array(24)
@@ -81,14 +78,8 @@ ruleTester.run("max-tags", rule, {
                 .map(() => "// TODO: ---")
                 .join("\n"),
             errors: [
-                {
-                    messageId: ERROR_MAX,
-                    data: { scope: "file", actual: 24, max: 4 },
-                },
-                {
-                    messageId: ERROR_MAX,
-                    data: { scope: "project", actual: 35, max: 32 },
-                },
+                getMessage({ scope: "file", actual: 24, max: 4 }),
+                getMessage({ scope: "project", actual: 35, max: 32 }),
             ],
         },
         {
@@ -99,12 +90,7 @@ ruleTester.run("max-tags", rule, {
             // FIXME: fixme
             // FIXME: fixme
             `,
-            errors: [
-                {
-                    messageId: ERROR_MAX,
-                    data: { scope: "file", actual: 5, max: 4 },
-                },
-            ],
+            errors: [getMessage({ scope: "file", actual: 5, max: 4 })],
         },
     ],
 });
