@@ -1,12 +1,28 @@
 const assert = require("assert");
-const { rangeSamples } = require("../../../lib/rules/utils/fixtures");
 const { range } = require("../../../lib/rules/utils/array");
 
 // TEST range
+const rangesTests = [
+    {
+        from: 0,
+        to: 5,
+        array: [0, 1, 2, 3, 4],
+    },
+    {
+        from: -3,
+        to: -2,
+        array: [-3],
+    },
+    {
+        from: -2,
+        to: 3,
+        array: [-2, -1, 0, 1, 2],
+    },
+];
 
 describe("array >> range", function () {
     it("by fixtures", function () {
-        rangeSamples.forEach(function ({ from, to, array }) {
+        rangesTests.forEach(function ({ from, to, array }) {
             assert.deepStrictEqual(array, range(from, to));
         });
     });

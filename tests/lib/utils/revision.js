@@ -1,7 +1,7 @@
 const assert = require("assert");
 // var sinon = require('sinon');
 const revision = require("../../../lib/rules/utils/revision");
-const { lineRevisionFullData } = require("../../../lib/rules/utils/fixtures");
+const { lineRevisionFullData } = require("../fixtures/data/revisions");
 
 // Не работают моки, чтобы подменить getLineRevision
 // describe("Тест getLineCommit", function() {

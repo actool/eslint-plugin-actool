@@ -1,12 +1,31 @@
 const assert = require("assert");
-const { validateDays } = require("../../../lib/rules/utils/fixtures");
 const { validateDiffByDates } = require("../../../lib/rules/utils/validate");
 
 // TEST validateDiffByDates
+const validateDaysTests = [
+    {
+        date1: new Date("9/11/2020"),
+        date2: new Date("9/30/2020"),
+        diff: 12,
+        result: false,
+    },
+    {
+        date1: new Date("9/11/2020"),
+        date2: new Date("9/12/2020"),
+        diff: 1,
+        result: true,
+    },
+    {
+        date1: new Date("9/11/2020"),
+        date2: new Date("9/30/2020"),
+        diff: 50,
+        result: true,
+    },
+];
 
-describe("validate >> validateDiff", function () {
-    it("by dates", function () {
-        validateDays.forEach(function ({ date1, date2, diff, result }) {
+describe("validate >> validateDiff", () => {
+    it("by dates", () => {
+        validateDaysTests.forEach(function ({ date1, date2, diff, result }) {
             assert.deepStrictEqual(result, validateDiffByDates(date1, date2, diff));
         });
     });
@@ -15,6 +34,18 @@ describe("validate >> validateDiff", function () {
 
 // TEST validateDiffByCommits
 
+// const validateCommitsTests = [
+//     {
+//         commit1: {
+//             date: new Date("9/11/2020"),
+//         },
+//         commit2: {
+//             date: new Date("9/11/2020"),
+//         },
+//         diff: 1,
+//         result: true,
+//     },
+// ];
 // describe("Тест validateDiffByCommits", function() {
 
 //     it("Тест валидации по комитам", function() {
