@@ -1,5 +1,5 @@
 var assert = require('assert');
-var sinon = require('sinon');
+// var sinon = require('sinon');
 const revision = require("../../../lib/rules/utils/revision");
 const { lineRevisionFullData} = require("../../../lib/rules/utils/fixtures");
 
