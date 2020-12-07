@@ -1,7 +1,7 @@
-var assert = require('assert');
+const assert = require("assert");
 // var sinon = require('sinon');
 const revision = require("../../../lib/rules/utils/revision");
-const { lineRevisionFullData} = require("../../../lib/rules/utils/fixtures");
+const { lineRevisionFullData } = require("../../../lib/rules/utils/fixtures");
 
 // Не работают моки, чтобы подменить getLineRevision
 // describe("Тест getLineCommit", function() {
@@ -12,19 +12,16 @@ const { lineRevisionFullData} = require("../../../lib/rules/utils/fixtures");
 //         let v = revision.getLineCommit({line: '1', file: '2'});
 //         assert.strictEqual(v, 'exp');
 //     });
-  
-//   });
 
+//   });
 
 // TEST parseLineRevision
 
-describe("Тест parseLineRevision", function() {
-
-    it("Тест передаваемой линии комита из git blame и его парса", function() {
-        lineRevisionFullData.forEach(function({line, data}) {
-            let d = revision.parseLineRevision(line);
-            assert.deepStrictEqual(d, data)
-        })
+describe("Тест parseLineRevision", function () {
+    it("Тест передаваемой линии комита из git blame и его парса", function () {
+        lineRevisionFullData.forEach(function ({ line, data }) {
+            const d = revision.parseLineRevision(line);
+            assert.deepStrictEqual(d, data);
+        });
     });
-  
-  });
+});
