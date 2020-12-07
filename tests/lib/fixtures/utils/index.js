@@ -7,8 +7,7 @@ var fs = require('fs');
  */
 function getFileContent(path) {
     const content = fs.readFileSync(path, 'utf8')
-    // FIXME: Maybe will nee - // content.replace(new RegExp("\u000d", "g"), "");
-    return content;
+    return content.replace(new RegExp("\u000d", "g"), "");
 }
 
 /**

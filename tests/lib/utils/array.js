@@ -1,7 +1,6 @@
 const assert = require("assert");
 const { range } = require("../../../lib/utils/array");
 
-// TEST range
 const rangesTests = [
     {
         from: 0,
