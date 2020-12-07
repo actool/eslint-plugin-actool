@@ -1,12 +1,13 @@
 const { compile } = require("json-schema-to-typescript");
 const { rules } = require("../lib");
-const { writeFileSync } = require("fs");
+const { appendFileSync, writeFileSync } = require("fs");
 
 /**
  * Settings
  */
 const SCRIPT_LABEL = "[🛠️  gen-types] ";
 const PAD = 24;
+const OUTPUT = "lib/rules/types.d.ts";
 /**
  * Logs helpers
  */
@@ -22,11 +23,20 @@ const withLabel = (message) => `${SCRIPT_LABEL}${message}`;
  */
 async function main() {
     println(withLabel("Starting..."));
+    cleanOutput();
     const ruleNames = Object.keys(rules);
     for (const ruleName of ruleNames) {
-        print(withLabel(`> ${ruleName.padEnd(PAD, " ")}`));
+        print(withLabel(`> Generate >> ${ruleName.padEnd(PAD, " ")}`));
         await generateTypesForRule(ruleName);
     }
+}
+
+/**
+ * Clean output file
+ */
+function cleanOutput() {
+    println(withLabel("> Clean output "));
+    writeFileSync(OUTPUT, "");
 }
 
 /**
@@ -45,7 +55,7 @@ async function generateTypesForRule(ruleName) {
 
     await compile(schema[0], `${ruleName}Options`)
         .then((genTypes) => {
-            writeFileSync("lib/rules/types.d.ts", genTypes);
+            appendFileSync(OUTPUT, genTypes);
             println("✔️");
         })
         .catch(() => {
