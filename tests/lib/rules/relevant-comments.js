@@ -66,56 +66,74 @@ const ruleTester = new RuleTester({
 ruleTester.run("relevant-comments", rule, {
     valid: [
         fixtures.component,
+        // {{scope}}.disabled - none
         {
-            options: [
-                {
-                    block: { disabled: true },
-                },
-            ],
+            options: [{ block: { disabled: true } }],
             ...fixtures.versioned,
         },
     ],
     invalid: [
+        // {{scope}}.disabled - block (commit)
         {
+            errors: [errors.versioned.blockCom1],
+            ...fixtures.versioned,
+        },
+        // {{scope}}.disabled - line (commit)
+        {
+            options: [{ line: { disabled: false }, block: { disabled: true } }],
+            errors: [errors.versioned.lineCom1],
+            ...fixtures.versioned,
+        },
+        // {{scope}}.disabled - line && block (commit)
+        {
+            options: [{ line: { disabled: false } }],
+            // NOTE: order is matter
+            errors: [errors.versioned.blockCom1, errors.versioned.lineCom1],
+            ...fixtures.versioned,
+        },
+        // {{scope}}.by - block (days)
+        {
+            options: [{ block: { by: "days" } }],
             errors: [
                 errors.versioned.blockMin1,
                 errors.versioned.blockMin2,
-                errors.versioned.blockCom1,
                 errors.versioned.blockMin3,
             ],
             ...fixtures.versioned,
         },
+        // {{scope}}.by - line (days)
         {
-            options: [
-                {
-                    line: { disabled: false },
-                    block: { disabled: true },
-                },
-            ],
+            options: [{ line: { by: "days", disabled: false }, block: { disabled: true } }],
             errors: [
                 errors.versioned.lineMin1,
                 errors.versioned.lineMin2,
-                errors.versioned.lineCom1,
                 errors.versioned.lineMin3,
             ],
             ...fixtures.versioned,
         },
+        // {{scope}}.by - line && block (days)
         {
-            options: [
-                {
-                    line: { disabled: false },
-                },
-            ],
+            options: [{ line: { by: "days", disabled: false }, block: { by: "days" } }],
             // NOTE: order is matter
             errors: [
                 errors.versioned.lineMin1,
                 errors.versioned.blockMin1,
                 errors.versioned.blockMin2,
-                errors.versioned.blockCom1,
                 errors.versioned.blockMin3,
                 errors.versioned.lineMin2,
-                errors.versioned.lineCom1,
                 errors.versioned.lineMin3,
+            ],
+            ...fixtures.versioned,
+        },
+        // {{scope}}.by - line && block (mix)
+        {
+            options: [{ line: { disabled: false }, block: { by: "days" } }],
+            // NOTE: order is matter
+            errors: [
+                errors.versioned.blockMin1,
+                errors.versioned.blockMin2,
+                errors.versioned.blockMin3,
+                errors.versioned.lineCom1,
             ],
             ...fixtures.versioned,
         },
