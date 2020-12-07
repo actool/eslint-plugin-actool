@@ -49,6 +49,21 @@ ruleTester.run("max-tags", rule, {
             // FIXME: 3
             console.log("test");
         `,
+        {
+            code: `
+            // FIXME: fixme
+            // FIXME: fixme
+            // FIXME: fixme
+            // FIXME: fixme
+            // FIXME: fixme
+            // FIXME: fixme
+            `,
+            options: [
+                {
+                    file: { disabled: true },
+                },
+            ],
+        },
     ],
 
     invalid: [
@@ -74,20 +89,14 @@ ruleTester.run("max-tags", rule, {
                 foo: foo,
             };
             `,
-            // options: [
-            //     {
-            //         project: { disabled: true },
-            //         file: { max: 6 },
-            //     },
-            // ],
             errors: [getMessage(6, 4).file],
         },
         {
-            code: Array(24)
+            code: Array(17)
                 .fill("")
                 .map(() => "// TODO: ---")
                 .join("\n"),
-            errors: [getMessage(24, 4).file, getMessage(35, 32).project],
+            errors: [getMessage(17, 4).file, getMessage(34, 32).project],
         },
         {
             code: `
@@ -98,6 +107,18 @@ ruleTester.run("max-tags", rule, {
             // FIXME: fixme
             `,
             errors: [getMessage(5, 4).file],
+        },
+        {
+            code: `
+            // FIXME: fixme
+            // FIXME: fixme
+            `,
+            options: [
+                {
+                    file: { max: 1 },
+                },
+            ],
+            errors: [getMessage(2, 1).file],
         },
     ],
 });
