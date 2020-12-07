@@ -1,6 +1,6 @@
 const assert = require("assert");
-const { validateDays, validateCommits } = require("../../../lib/rules/utils/fixtures");
-const { validateDiffByDates, validateDiffByCommits } = require("../../../lib/rules/utils/validate");
+const { validateDays } = require("../../../lib/rules/utils/fixtures");
+const { validateDiffByDates } = require("../../../lib/rules/utils/validate");
 
 // TEST validateDiffByDates
 
