@@ -21,6 +21,7 @@
     "publish:major": "npm version major && npm publish",
     "new:rule": "yo eslint:rule",
     "test": "npm run mocha:utils && npm run mocha:rules && npm run lint:test",
+    "mocha": "mocha",
     "mocha:rules": "mocha tests/lib/rules/** --timeout 5000",
     "mocha:utils": "mocha tests/lib/utils/**",
     "lint:test": "eslint .",
