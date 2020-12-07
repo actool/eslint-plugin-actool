@@ -15,19 +15,7 @@ const rule = require("../../../lib/rules/max-tags"),
 // Tests
 //------------------------------------------------------------------------------
 
-/**
- * Get rule message
- * @param {{
- *  scope: "file" | "project"
- *  occurred: number,
- *  max: number
- * }} arg
- * FIXME: get from rule meta?
- */
-const getMessage = ({ scope, occurred, max }) => {
-    // eslint-disable-next-line max-len
-    return `At ${scope} occured ${occurred} TODO/FIXME tags, but allowed only ${max} (resolve or register)`;
-};
+const { ERROR_MAX } = rule.MESSAGES;
 
 /**
  * @type {import("eslint").RuleTester}
@@ -80,7 +68,12 @@ ruleTester.run("max-tags", rule, {
             //         file: { max: 6 },
             //     },
             // ],
-            errors: [{ message: getMessage({ scope: "file", occurred: 6, max: 4 }) }],
+            errors: [
+                {
+                    messageId: ERROR_MAX,
+                    data: { scope: "file", actual: 6, max: 4 },
+                },
+            ],
         },
         {
             code: Array(24)
@@ -88,8 +81,14 @@ ruleTester.run("max-tags", rule, {
                 .map(() => "// TODO: ---")
                 .join("\n"),
             errors: [
-                { message: getMessage({ scope: "file", occurred: 24, max: 4 }) },
-                { message: getMessage({ scope: "project", occurred: 35, max: 32 }) },
+                {
+                    messageId: ERROR_MAX,
+                    data: { scope: "file", actual: 24, max: 4 },
+                },
+                {
+                    messageId: ERROR_MAX,
+                    data: { scope: "project", actual: 35, max: 32 },
+                },
             ],
         },
         {
@@ -100,7 +99,12 @@ ruleTester.run("max-tags", rule, {
             // FIXME: fixme
             // FIXME: fixme
             `,
-            errors: [{ message: getMessage({ scope: "file", occurred: 5, max: 4 }) }],
+            errors: [
+                {
+                    messageId: ERROR_MAX,
+                    data: { scope: "file", actual: 5, max: 4 },
+                },
+            ],
         },
     ],
 });
