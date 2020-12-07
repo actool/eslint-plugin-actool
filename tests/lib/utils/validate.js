@@ -1,5 +1,5 @@
 const assert = require("assert");
-const { validateDiffByDates } = require("../../../lib/rules/utils/validate");
+const { validateDiffByDates } = require("../../../lib/utils/validate");
 
 // TEST validateDiffByDates
 const validateDaysTests = [
