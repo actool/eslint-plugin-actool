@@ -16,6 +16,22 @@ const { getFileFixture } = require("../fixtures/utils");
 // Tests
 //------------------------------------------------------------------------------
 
+const { INRELEVANT } = rule.MESSAGES;
+
+/**
+ *
+ * @param {string} loc loc
+ * @param {string} diff diff
+ */
+const getMessage = (loc, diff) => {
+    return {
+        lineMin: { messageId: INRELEVANT, data: { scope: "line", by: "min", loc, diff } },
+        blockMin: { messageId: INRELEVANT, data: { scope: "block", by: "min", loc, diff } },
+        lineCommits: { messageId: INRELEVANT, data: { scope: "line", by: "commits", loc, diff } },
+        blockCommits: { messageId: INRELEVANT, data: { scope: "block", by: "commits", loc, diff } },
+    };
+};
+
 /**
  * @type {import("eslint").RuleTester}
  */
@@ -30,14 +46,14 @@ ruleTester.run("relevant-comments", rule, {
     invalid: [
         {
             errors: [
-                { message: "For line 5 occurred irrelevant comment by 6 min" },
-                { message: "For block [8-8] occurred irrelevant comment by 3 min" },
-                { message: "For block [11-13] occurred irrelevant comment by 4 min" },
-                { message: "For block [21-23] occurred irrelevant comment by 126 commits" },
-                { message: "For block [21-23] occurred irrelevant comment by 45 min" },
-                { message: "For line 29 occurred irrelevant comment by 30 min" },
-                { message: "For line 32 occurred irrelevant comment by 8 commits" },
-                { message: "For line 32 occurred irrelevant comment by 42 min" },
+                getMessage("5", "6").lineMin,
+                getMessage("[8-8]", "3").blockMin,
+                getMessage("[11-13]", "4").blockMin,
+                getMessage("[21-23]", "126").blockCommits,
+                getMessage("[21-23]", "45").blockMin,
+                getMessage("29", "30").lineMin,
+                getMessage("32", "8").lineCommits,
+                getMessage("32", "42").lineMin,
             ],
             ...getFileFixture("tests/lib/fixtures/relevant-comments.ts"),
         },
