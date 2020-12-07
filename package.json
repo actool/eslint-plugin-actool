@@ -28,6 +28,7 @@
     "gen:types": "node scripts/gen-types.js"
   },
   "dependencies": {
+    "json-schema-defaults": "^0.4.0",
     "requireindex": "~1.1.0"
   },
   "devDependencies": {

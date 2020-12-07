@@ -17,6 +17,8 @@ const withLabel = (message) => `${SCRIPT_LABEL}${message}`;
 
 /**
  * JSDoc types generating
+ * @see https://bcherny.github.io/json-schema-to-typescript-browser/
+ * @see https://www.npmjs.com/package/json-schema-to-typescript
  */
 async function main() {
     println(withLabel("Starting..."));
