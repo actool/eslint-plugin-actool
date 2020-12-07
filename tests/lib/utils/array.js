@@ -4,8 +4,8 @@ const { range } = require("../../../lib/rules/utils/array");
 
 // TEST range
 
-describe("Тест parseLineRevision", function () {
-    it("Тест передаваемой линии комита из git blame и его парса", function () {
+describe("array >> range", function () {
+    it("by fixtures", function () {
         rangeSamples.forEach(function ({ from, to, array }) {
             assert.deepStrictEqual(array, range(from, to));
         });

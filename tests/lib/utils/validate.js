@@ -4,12 +4,13 @@ const { validateDiffByDates } = require("../../../lib/rules/utils/validate");
 
 // TEST validateDiffByDates
 
-describe("Тест parseLineRevision", function () {
-    it("Тест валидации по дате", function () {
+describe("validate >> validateDiff", function () {
+    it("by dates", function () {
         validateDays.forEach(function ({ date1, date2, diff, result }) {
             assert.deepStrictEqual(result, validateDiffByDates(date1, date2, diff));
         });
     });
+    // TODO: it("by commits")
 });
 
 // TEST validateDiffByCommits

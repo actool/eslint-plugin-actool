@@ -17,8 +17,8 @@ const { lineRevisionFullData } = require("../../../lib/rules/utils/fixtures");
 
 // TEST parseLineRevision
 
-describe("Тест parseLineRevision", function () {
-    it("Тест передаваемой линии комита из git blame и его парса", function () {
+describe("revision >> parseLineRevision", function () {
+    it("by fixtures", function () {
         lineRevisionFullData.forEach(function ({ line, data }) {
             const d = revision.parseLineRevision(line);
             assert.deepStrictEqual(d, data);
