@@ -1,4 +1,4 @@
-# WIP: `relevant-comments`
+# `relevant-comments`
 
 **Validate relevanting of line&#39;s comment doclet**
 
@@ -45,15 +45,13 @@ if (diffCommits(A, B) <= 4)
 
 ## Options
 
-> **WIP**: For a while - aren't available
-
 ### `scope`
 Controls the rule behaviour for specific scope
 - [**line**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#line-comment) - for each line
 
 - [**block**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#block-comment) - for each code block
 
-- [**module**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#module-comment) - for each module
+- [**WIP: module**](https://github.com/actool/eslint-plugin-actool/blob/master/docs/how-it-work.md#module-comment) - for each module
 
 ```js
 // disable relevancy linting for line / block / module scopes
@@ -68,11 +66,11 @@ Controls the rule behaviour for specific scope
 <details>
     <summary>defaultValue</summary>
 
-    {
-        line: null,
-        block: { ... }, // see below
-        module: null,
-    }
+    line - [disabled]
+    block: - [enabled]
+    module: [disabled]
+
+    More details - see below
 </details>
 
 ### `by`
@@ -89,7 +87,9 @@ Specify base validating entity
 <details>
     <summary>defaultValue</summary>
 
-    [any-scope]: "commit"
+    line: "commit"
+    block: "commit"
+    module: "commit"
 </details>
 
 ### `diff`
@@ -105,7 +105,9 @@ Allowable diff between commits/days (for validating)
 <details>
     <summary>defaultValue</summary>
 
-    [any-scope]: 4
+    line: 4
+    block: 4
+    module: 4
 </details>
 
 ## When Not To Use It
@@ -119,6 +121,6 @@ Refer to our [conception explaining](https://github.com/actool/eslint-plugin-act
 
 ## Further Reading
 - https://github.com/actool/eslint-plugin-actool/issues/25
-- https://github.com/actool/eslint-plugin-actool/blob/master/docs/overview.md#comments-relevancy)
+- https://github.com/actool/eslint-plugin-actool/blob/master/docs/overview.md#comments-relevancy
 
 <!-- TODO: add links about problem -->
