@@ -74,6 +74,12 @@ ruleTester.run("max-tags", rule, {
                 foo: foo,
             };
             `,
+            options: [
+                {
+                    project: { disabled: true },
+                    file: { max: 6 },
+                },
+            ],
             errors: [{ message: getMessage({ scope: "file", occurred: 6, max: 4 }) }],
         },
         {
