@@ -21,7 +21,6 @@ export interface MaxTagsOptions {
      * Is scope disabled
      */
     disabled?: boolean;
-    [k: string]: unknown;
   };
   /**
    * Scope: File
@@ -35,9 +34,7 @@ export interface MaxTagsOptions {
      * Is scope disabled
      */
     disabled?: boolean;
-    [k: string]: unknown;
   };
-  [k: string]: unknown;
 }
 /* tslint:disable */
 /**
@@ -66,7 +63,6 @@ export interface RelevantCommentsOptions {
      * Is scope disabled
      */
     disabled?: boolean;
-    [k: string]: unknown;
   };
   /**
    * Scope: Block
@@ -84,7 +80,6 @@ export interface RelevantCommentsOptions {
      * Is scope disabled
      */
     disabled?: boolean;
-    [k: string]: unknown;
   };
   /**
    * Scope: Module
@@ -102,7 +97,5 @@ export interface RelevantCommentsOptions {
      * Is scope disabled
      */
     disabled?: boolean;
-    [k: string]: unknown;
   };
-  [k: string]: unknown;
 }
