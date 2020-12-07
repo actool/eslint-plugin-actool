@@ -32,6 +32,28 @@ const getMessage = (loc, diff) => {
     };
 };
 
+const fixtures = {
+    component: getFileFixture("tests/lib/fixtures/component.tsx"),
+    versioned: getFileFixture("tests/lib/fixtures/relevant-comments.ts"),
+};
+
+/**
+ * Store separately for flex testing
+ */
+const errors = {
+    component: {},
+    versioned: {
+        lineMin1: getMessage("5", "6").lineMin,
+        blockMin1: getMessage("[8-8]", "3").blockMin,
+        blockMin2: getMessage("[11-13]", "4").blockMin,
+        blockCom1: getMessage("[21-23]", "126").blockCommits,
+        blockMin3: getMessage("[21-23]", "45").blockMin,
+        lineMin2: getMessage("29", "30").lineMin,
+        lineCom1: getMessage("32", "8").lineCommits,
+        lineMin3: getMessage("32", "42").lineMin,
+    },
+};
+
 /**
  * @type {import("eslint").RuleTester}
  */
@@ -42,26 +64,60 @@ const ruleTester = new RuleTester({
 });
 
 ruleTester.run("relevant-comments", rule, {
-    valid: [getFileFixture("tests/lib/fixtures/component.tsx")],
+    valid: [
+        fixtures.component,
+        {
+            options: [
+                {
+                    block: { disabled: true },
+                },
+            ],
+            ...fixtures.versioned,
+        },
+    ],
     invalid: [
+        {
+            errors: [
+                errors.versioned.blockMin1,
+                errors.versioned.blockMin2,
+                errors.versioned.blockCom1,
+                errors.versioned.blockMin3,
+            ],
+            ...fixtures.versioned,
+        },
         {
             options: [
                 {
                     line: { disabled: false },
-                    module: { disabled: false },
+                    block: { disabled: true },
                 },
             ],
             errors: [
-                getMessage("5", "6").lineMin,
-                getMessage("[8-8]", "3").blockMin,
-                getMessage("[11-13]", "4").blockMin,
-                getMessage("[21-23]", "126").blockCommits,
-                getMessage("[21-23]", "45").blockMin,
-                getMessage("29", "30").lineMin,
-                getMessage("32", "8").lineCommits,
-                getMessage("32", "42").lineMin,
+                errors.versioned.lineMin1,
+                errors.versioned.lineMin2,
+                errors.versioned.lineCom1,
+                errors.versioned.lineMin3,
             ],
-            ...getFileFixture("tests/lib/fixtures/relevant-comments.ts"),
+            ...fixtures.versioned,
+        },
+        {
+            options: [
+                {
+                    line: { disabled: false },
+                },
+            ],
+            // NOTE: order is matter
+            errors: [
+                errors.versioned.lineMin1,
+                errors.versioned.blockMin1,
+                errors.versioned.blockMin2,
+                errors.versioned.blockCom1,
+                errors.versioned.blockMin3,
+                errors.versioned.lineMin2,
+                errors.versioned.lineCom1,
+                errors.versioned.lineMin3,
+            ],
+            ...fixtures.versioned,
         },
     ],
 });
