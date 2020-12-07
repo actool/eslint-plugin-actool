@@ -26,7 +26,7 @@ const rule = require("../../../lib/rules/max-tags"),
  */
 const getMessage = ({ scope, occurred, max }) => {
     // eslint-disable-next-line max-len
-    return `At ${scope} occured ${occurred} TODO/FIXME tags, but allowed only ${max} - please, resolve or move some tasks to your task-tracker`;
+    return `At ${scope} occured ${occurred} TODO/FIXME tags, but allowed only ${max} (resolve or register)`;
 };
 
 /**

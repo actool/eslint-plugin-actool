@@ -1,5 +1,8 @@
 // TODO: add @typescript-eslint
 
+// prettier-ignore
+const RULE_DOC_TMPL = require("./lib/consts").ruleDocUrl;
+
 module.exports = {
     parserOptions: {
         ecmaVersion: 2020,
@@ -47,5 +50,7 @@ module.exports = {
         // TODO: add other plugins (unicorn, ...)
         // plugin: eslint-plugin
         "eslint-plugin/prefer-output-null": 0,
+        // FIXME: more strict
+        "eslint-plugin/require-meta-docs-url": [2, { pattern: RULE_DOC_TMPL }],
     },
 };
