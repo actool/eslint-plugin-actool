@@ -1,7 +1,7 @@
 const assert = require("assert");
-const { validateDiffByDates, computeDiffByDays } = require("../../../lib/utils/validate");
+const { computeDiffByDays } = require("../../../lib/utils/validate");
 
-// TEST validateDiffByDates
+// FIXME: Maybe, after "byCommits" implementing - some fields will be redundant
 const validateDaysTests = [
     {
         from: new Date("9/11/2020"),
@@ -27,12 +27,6 @@ const validateDaysTests = [
 ];
 
 describe("validate", () => {
-    it(">> validateDiffByDates", () => {
-        validateDaysTests.forEach(({ from, to, maxDiff, expectedValid }) => {
-            const actualValid = validateDiffByDates({ from, to, maxDiff });
-            assert.deepStrictEqual(actualValid, expectedValid);
-        });
-    });
     it(">> computeDiffByDays", () => {
         validateDaysTests.forEach(({ from, to, expectedDiff }) => {
             const actualDiff = computeDiffByDays(from, to);
