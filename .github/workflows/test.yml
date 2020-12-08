@@ -10,13 +10,16 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v1
+      
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Install deps and test
-      run: |
-        npm install
-        npm test
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run Tests
+      run: npm test
       env:
         CI: true
