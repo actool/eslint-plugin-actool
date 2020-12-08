@@ -3,3 +3,4 @@ node_modules/**
 # TODO: !tests/lib/fixtures/data/**
 tests/lib/fixtures/**
 **/*.fixture.js
+.nyc_output

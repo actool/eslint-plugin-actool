@@ -19,6 +19,6 @@ jobs:
     - name: Install deps and run tests
       run: |
         npm install
-        npm test
+        npm run test:coverage
       env:
         CI: true
