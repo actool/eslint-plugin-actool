@@ -14,8 +14,8 @@ const fixtures = [
     },
 ];
 
-describe("getDocUrl >> getDocUrl", () => {
-    it("by fixtures", () => {
+describe("getDocUrl", () => {
+    it(">> getDocUrl", () => {
         fixtures.forEach(({ arg, expected }) => {
             assert.strictEqual(getDocUrl(arg), expected);
         });

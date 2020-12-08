@@ -19,8 +19,8 @@ const rangesTests = [
     },
 ];
 
-describe("array >> range", () => {
-    it("by fixtures", () => {
+describe("array", () => {
+    it(">> range", () => {
         rangesTests.forEach(({ from, to, array }) => {
             assert.deepStrictEqual(array, range(from, to));
         });

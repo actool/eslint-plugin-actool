@@ -1,7 +1,8 @@
 const assert = require("assert");
 const { getFileContent, getFileFixture } = require("../../fixtures/utils");
 
-const fixtures = [
+// TODO: add tests
+const tests = [
     {
         path: "tests/lib/fixtures/hoc.fixture.js",
         content: `import { compose } from "shared/helpers";
@@ -21,17 +22,14 @@ export const withHocs = compose(withAntd, withRouter, withApollo);
     },
 ];
 
-describe("fixtures/utils >> getFileContent", () => {
-    it("by fixtures", () => {
-        fixtures.forEach(({ path, content }) => {
+describe("fixtures/utils", () => {
+    it(">> getFileContent", () => {
+        tests.forEach(({ path, content }) => {
             assert.strictEqual(getFileContent(path), content);
         });
     });
-});
-
-describe("fixtures/utils >> getFileFixture", () => {
-    it("by fixtures", () => {
-        fixtures.forEach(({ path, content }) => {
+    it(">> getFileFixture", () => {
+        tests.forEach(({ path, content }) => {
             const expected = { code: content, filename: path };
             assert.deepStrictEqual(getFileFixture(path), expected);
         });
