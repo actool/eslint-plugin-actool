@@ -102,7 +102,7 @@ $ npm install eslint-plugin-actool -g  # or install globally
    > scope: *file*, *project*
 - [`relevant-comments`][r:relevant-comments] - validate relevanting of comment doclet with corresponding code statement
    > scope: *line*, *block*, *module*
-- [`no-commented-code`][r:no-commented-code] - limit commented code usage and storing
+- (WIP) [`no-commented-code`][r:no-commented-code] - limit commented code usage and storing
 
 > [More details][d:howit]
 
