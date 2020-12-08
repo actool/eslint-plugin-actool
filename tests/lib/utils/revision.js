@@ -92,7 +92,7 @@ describe("revision", () => {
         const tests = [
             { loc: getLoc(24, 38), file, expected: { ...commits.e72f3279, line: 32 } },
             { loc: getLoc(41, 45), file, expected: { ...commits[75339325], line: 44 } },
-            { loc: getLoc(1, 28), file, expected: { ...commits["01ce8bcc"], line: 4 } },
+            { loc: getLoc(1, 28), file, expected: { ...commits["01ce8bcc"], line: 29 } },
         ];
 
         tests.forEach(({ loc, file, expected }) => {
