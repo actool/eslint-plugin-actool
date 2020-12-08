@@ -1,32 +1,42 @@
 const assert = require("assert");
-const { validateDiffByDates } = require("../../../lib/utils/validate");
+const { validateDiffByDates, computeDiffByDays } = require("../../../lib/utils/validate");
 
 // TEST validateDiffByDates
 const validateDaysTests = [
     {
-        date1: new Date("9/11/2020"),
-        date2: new Date("9/30/2020"),
+        from: new Date("9/11/2020"),
+        to: new Date("9/30/2020"),
         diff: 12,
-        result: false,
+        expectedDiff: 19,
+        expectedValid: false,
     },
     {
-        date1: new Date("9/11/2020"),
-        date2: new Date("9/12/2020"),
+        from: new Date("9/11/2020"),
+        to: new Date("9/12/2020"),
         diff: 1,
-        result: true,
+        expectedDiff: 1,
+        expectedValid: true,
     },
     {
-        date1: new Date("9/11/2020"),
-        date2: new Date("9/30/2020"),
+        from: new Date("9/11/2020"),
+        to: new Date("9/30/2020"),
         diff: 50,
-        result: true,
+        expectedDiff: 19,
+        expectedValid: true,
     },
 ];
 
-describe("validate >> validateDiff", () => {
-    it("by dates", () => {
-        validateDaysTests.forEach(({ date1, date2, diff, result }) => {
-            assert.deepStrictEqual(result, validateDiffByDates(date1, date2, diff));
+describe("validate", () => {
+    it(">> validateDiffByDates", () => {
+        validateDaysTests.forEach(({ from, to, diff, expectedValid }) => {
+            const actualValid = validateDiffByDates(from, to, diff);
+            assert.deepStrictEqual(actualValid, expectedValid);
+        });
+    });
+    it(">> computeDiffByDays", () => {
+        validateDaysTests.forEach(({ from, to, expectedDiff }) => {
+            const actualDiff = computeDiffByDays(from, to);
+            assert.strictEqual(actualDiff, expectedDiff);
         });
     });
     // TODO: it("by commits")
