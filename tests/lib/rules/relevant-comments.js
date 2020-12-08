@@ -55,6 +55,9 @@ const errors = {
 const options = {
     byDays: { by: "days" },
     byCommit: { by: "commit" },
+    diff1: { diff: 1 },
+    diff4: { diff: 4 },
+    diff10: { diff: 10 },
     disabled: { disabled: true },
     enabled: { disabled: false },
 };
@@ -140,6 +143,18 @@ ruleTester.run("relevant-comments", rule, {
                 errors.versioned.blockMin3,
                 errors.versioned.lineCom1,
             ],
+            ...fixtures.versioned,
+        },
+        // {{scope}}.diff - block
+        {
+            options: [{ block: { ...options.byDays, ...options.diff4 } }],
+            errors: [errors.versioned.blockMin2, errors.versioned.blockMin3],
+            ...fixtures.versioned,
+        },
+        {
+            // prettier-ignore
+            options: [{ line: { ...options.byDays, ...options.diff10, ...options.enabled }, block: options.disabled }],
+            errors: [errors.versioned.lineMin2, errors.versioned.lineMin3],
             ...fixtures.versioned,
         },
     ],

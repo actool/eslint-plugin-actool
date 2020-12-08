@@ -105,9 +105,10 @@ Allowable diff between commits/days (for validating)
 <details>
     <summary>defaultValue</summary>
 
-    line: 4
-    block: 4
-    module: 4
+    > FIXME: Temp, later will be "4"
+    line: 1
+    block: 1
+    module: 1
 </details>
 
 ## When Not To Use It
