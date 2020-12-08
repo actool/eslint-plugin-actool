@@ -37,9 +37,7 @@ const fixtures = {
     versioned: getFileFixture("tests/lib/fixtures/relevant-comments.ts"),
 };
 
-/**
- * Store separately for flex testing
- */
+/** @remark Storing separately for flex testing */
 const errors = {
     component: {},
     versioned: {
@@ -52,6 +50,13 @@ const errors = {
         lineCom1: getMessage("32", "8").lineCommits,
         lineMin3: getMessage("32", "42").lineMin,
     },
+};
+/** @remark Storing separately for flex testing */
+const options = {
+    byDays: { by: "days" },
+    byCommit: { by: "commit" },
+    disabled: { disabled: true },
+    enabled: { disabled: false },
 };
 
 /**
@@ -68,7 +73,7 @@ ruleTester.run("relevant-comments", rule, {
         fixtures.component,
         // {{scope}}.disabled - none
         {
-            options: [{ block: { disabled: true } }],
+            options: [{ block: options.disabled }],
             ...fixtures.versioned,
         },
     ],
@@ -80,20 +85,20 @@ ruleTester.run("relevant-comments", rule, {
         },
         // {{scope}}.disabled - line (commit)
         {
-            options: [{ line: { disabled: false }, block: { disabled: true } }],
+            options: [{ line: options.enabled, block: options.disabled }],
             errors: [errors.versioned.lineCom1],
             ...fixtures.versioned,
         },
         // {{scope}}.disabled - line && block (commit)
         {
-            options: [{ line: { disabled: false } }],
+            options: [{ line: options.enabled }],
             // NOTE: order is matter
             errors: [errors.versioned.blockCom1, errors.versioned.lineCom1],
             ...fixtures.versioned,
         },
         // {{scope}}.by - block (days)
         {
-            options: [{ block: { by: "days" } }],
+            options: [{ block: options.byDays }],
             errors: [
                 errors.versioned.blockMin1,
                 errors.versioned.blockMin2,
@@ -103,7 +108,7 @@ ruleTester.run("relevant-comments", rule, {
         },
         // {{scope}}.by - line (days)
         {
-            options: [{ line: { by: "days", disabled: false }, block: { disabled: true } }],
+            options: [{ line: { ...options.byDays, ...options.enabled }, block: options.disabled }],
             errors: [
                 errors.versioned.lineMin1,
                 errors.versioned.lineMin2,
@@ -113,7 +118,7 @@ ruleTester.run("relevant-comments", rule, {
         },
         // {{scope}}.by - line && block (days)
         {
-            options: [{ line: { by: "days", disabled: false }, block: { by: "days" } }],
+            options: [{ line: { ...options.byDays, ...options.enabled }, block: options.byDays }],
             // NOTE: order is matter
             errors: [
                 errors.versioned.lineMin1,
@@ -127,7 +132,7 @@ ruleTester.run("relevant-comments", rule, {
         },
         // {{scope}}.by - line && block (mix)
         {
-            options: [{ line: { disabled: false }, block: { by: "days" } }],
+            options: [{ line: options.enabled, block: options.byDays }],
             // NOTE: order is matter
             errors: [
                 errors.versioned.blockMin1,
