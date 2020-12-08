@@ -14,6 +14,10 @@ const commits = {
     "9b4d9454": { hash: "9b4d9454", author: "Ilya Azin", date: new Date("2020-11-29 06:37:24 +0300") },
     // prettier-ignore
     "0414d1a3": { hash: "0414d1a3", author: "Ilya Azin", date: new Date("2020-11-29 05:41:26 +0300") },
+    // prettier-ignore
+    "e72f3279": { hash: "e72f3279", author: "Ilya Azin", date: new Date("2020-12-06 03:09:33 +03:00") },
+    // prettier-ignore
+    "75339325": { hash: "75339325", author: "Ilya Azin", date: new Date("2020-11-29 05:17:17 +03:00") },
 };
 
 describe("revision", () => {
@@ -72,6 +76,28 @@ describe("revision", () => {
         tests.forEach(({ line, file, expected }) => {
             const actual = util.getLineCommit({ file, line });
             assert.deepStrictEqual(actual, { ...expected, line });
+        });
+    });
+
+    it(">> getBlockLastCommit", () => {
+        /**
+         * @param {number} start start
+         * @param {number} end end
+         */
+        const getLoc = (start, end) => ({
+            start: { line: start },
+            end: { line: end },
+        });
+
+        const tests = [
+            { loc: getLoc(24, 38), file, expected: { ...commits.e72f3279, line: 32 } },
+            { loc: getLoc(41, 45), file, expected: { ...commits[75339325], line: 44 } },
+            { loc: getLoc(1, 28), file, expected: { ...commits["01ce8bcc"], line: 4 } },
+        ];
+
+        tests.forEach(({ loc, file, expected }) => {
+            const actual = util.getBlockLastCommit({ file, loc });
+            assert.deepStrictEqual(actual, expected);
         });
     });
 });

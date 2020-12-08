@@ -23,7 +23,7 @@
     "test": "npm run mocha:utils && npm run mocha:rules && npm run lint:test",
     "mocha": "mocha",
     "mocha:rules": "mocha tests/lib/rules/** --timeout 8000",
-    "mocha:utils": "mocha tests/lib/utils/**",
+    "mocha:utils": "mocha tests/lib/utils/** --timeout 7000",
     "lint:test": "eslint .",
     "lint:fix": "eslint . --fix",
     "gen:types": "node scripts/gen-types.js"
