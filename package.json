@@ -20,7 +20,7 @@
     "publish:minor": "npm version minor && npm publish",
     "publish:major": "npm version major && npm publish",
     "new:rule": "yo eslint:rule",
-    "test": "npm run lint:test && npm run mocha:utils",
+    "test": "npm run lint:test && npm run mocha:utils && npm run mocha:rules",
     "test:ci": "npm run lint:test && npm run mocha:utils",
     "mocha": "mocha",
     "mocha:rules": "mocha tests/lib/rules/** --timeout 8000",
