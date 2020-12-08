@@ -3,25 +3,36 @@ const assert = require("assert");
 const revision = require("../../../lib/utils/revision");
 const { lineRevisionFullData } = require("../fixtures/data/revisions");
 
-// Не работают моки, чтобы подменить getLineRevision
-// describe("Тест getLineCommit", function() {
+const file = "tests/lib/fixtures/relevant-comments.ts";
 
-//     it("Тест функции по получению данных о строке файла по комиту", function() {
-//         var fake = sinon.fake.returns('f9b16819 (Ilya Azin 2020-11-16 01:49:33 +0300 2)   "name": "eslint-plugin-actool",');
-//         sinon.replace(revision, 'getLineRevision', fake);
-//         let v = revision.getLineCommit({line: '1', file: '2'});
-//         assert.strictEqual(v, 'exp');
-//     });
+const fixtures = [
+    // prettier-ignore
+    { line: 1, file, rev: "d302a167 (Ilya Azin 2020-11-24 15:57:22 +0300 1) type DictionariesAPI = {" },
+    // prettier-ignore
+    { line: 4, file, rev: "01ce8bcc (Ilya Azin 2020-12-05 23:51:57 +0300 4)     /** Method comment */" },
+    // prettier-ignore
+    { line: 8, file, rev: "950d2454 (Ilya Azin 2020-11-24 15:54:03 +0300 8) // TODO: fix types" },
+    // prettier-ignore
+    { line: 11, file, rev: "9b4d9454 (Ilya Azin 2020-11-29 06:37:24 +0300 11) /** data preprocess" },
+    // prettier-ignore
+    { line: 17, file, rev: "0414d1a3 (Ilya Azin 2020-11-29 05:41:26 +0300 17) function processData(some: any) { " }, // eslint-disable-line max-len
+    // prettier-ignore
+    { line: 22, file, rev: "950d2454 (Ilya Azin 2020-11-24 15:54:03 +0300 22)  * Get schedules from server" },
+    // prettier-ignore
+    { line: 24, file, rev: "d302a167 (Ilya Azin 2020-11-24 15:57:22 +0300 24) const getSharedDictionaries = async () => {" }, // eslint-disable-line max-len
+];
 
-//   });
-
-// TEST parseLineRevision
-
-describe("revision >> parseLineRevision", () => {
-    it("by fixtures", () => {
+describe("revision", () => {
+    it(">> parseLineRevision", () => {
         lineRevisionFullData.forEach(({ line, data }) => {
-            const d = revision.parseLineRevision(line);
-            assert.deepStrictEqual(d, data);
+            const actual = revision.parseLineRevision(line);
+            assert.deepStrictEqual(actual, data);
+        });
+    });
+    it(">> getLineRevision", () => {
+        fixtures.forEach(({ line, file, rev }) => {
+            const actual = revision.getLineRevision({ file, line });
+            assert.deepStrictEqual(actual.trim(), rev.trim());
         });
     });
 });
