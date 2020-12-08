@@ -6,21 +6,21 @@ const validateDaysTests = [
     {
         from: new Date("9/11/2020"),
         to: new Date("9/30/2020"),
-        diff: 12,
+        maxDiff: 12,
         expectedDiff: 19,
         expectedValid: false,
     },
     {
         from: new Date("9/11/2020"),
         to: new Date("9/12/2020"),
-        diff: 1,
+        maxDiff: 1,
         expectedDiff: 1,
         expectedValid: true,
     },
     {
         from: new Date("9/11/2020"),
         to: new Date("9/30/2020"),
-        diff: 50,
+        maxDiff: 50,
         expectedDiff: 19,
         expectedValid: true,
     },
@@ -28,8 +28,8 @@ const validateDaysTests = [
 
 describe("validate", () => {
     it(">> validateDiffByDates", () => {
-        validateDaysTests.forEach(({ from, to, diff, expectedValid }) => {
-            const actualValid = validateDiffByDates(from, to, diff);
+        validateDaysTests.forEach(({ from, to, maxDiff, expectedValid }) => {
+            const actualValid = validateDiffByDates({ from, to, maxDiff });
             assert.deepStrictEqual(actualValid, expectedValid);
         });
     });
