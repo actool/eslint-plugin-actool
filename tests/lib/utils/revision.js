@@ -1,7 +1,5 @@
 const assert = require("assert");
-// var sinon = require('sinon');
-const revision = require("../../../lib/utils/revision");
-const { lineRevisionFullData } = require("../fixtures/data/revisions");
+const util = require("../../../lib/utils/revision");
 
 const file = "tests/lib/fixtures/relevant-comments.ts";
 
@@ -20,9 +18,21 @@ const commits = {
 
 describe("revision", () => {
     it(">> parseLineRevision", () => {
-        lineRevisionFullData.forEach(({ line, data }) => {
-            const actual = revision.parseLineRevision(line);
-            assert.deepStrictEqual(actual, data);
+        const tests = [
+            {
+                revision: `b6988094 (Ilya Azin 2020-11-02 09:51:49 +0300  1) import React from "react";`,
+                // prettier-ignore
+                expected: { hash: "b6988094", author: "Ilya Azin", date: new Date("2020-11-02 09:51:49 +0300"), line: 1 }, // eslint-disable-line max-len
+            },
+            {
+                revision: `e411fb43 (Ilya Azin 2020-11-29 06:52:45 +0300 20)     "publish:minor": "npm version minor && npm publish",`, // eslint-disable-line max-len
+                // prettier-ignore
+                expected: { hash: "e411fb43", author: "Ilya Azin", date: new Date("2020-11-29 06:52:45 +0300"), line: 20 }, // eslint-disable-line max-len
+            },
+        ];
+        tests.forEach(({ revision, expected }) => {
+            const actual = util.parseLineRevision(revision);
+            assert.deepStrictEqual(actual, expected);
         });
     });
     it(">> getLineRevision", () => {
@@ -44,7 +54,7 @@ describe("revision", () => {
         ];
 
         tests.forEach(({ line, file, expected }) => {
-            const actual = revision.getLineRevision({ file, line });
+            const actual = util.getLineRevision({ file, line });
             assert.strictEqual(actual.trim(), expected.trim());
         });
     });
@@ -60,7 +70,7 @@ describe("revision", () => {
         ];
 
         tests.forEach(({ line, file, expected }) => {
-            const actual = revision.getLineCommit({ file, line });
+            const actual = util.getLineCommit({ file, line });
             assert.deepStrictEqual(actual, { ...expected, line });
         });
     });
