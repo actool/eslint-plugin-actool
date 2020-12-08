@@ -1,5 +1,5 @@
 const assert = require("assert");
-const { computeDiffByDays } = require("../../../lib/utils/validate");
+const { computeDiffByDays } = require("../../../lib/utils/diff-date");
 
 // FIXME: Maybe, after "byCommits" implementing - some fields will be redundant
 const validateDaysTests = [
@@ -26,7 +26,7 @@ const validateDaysTests = [
     },
 ];
 
-describe("validate", () => {
+describe("diff-date", () => {
     it(">> computeDiffByDays", () => {
         validateDaysTests.forEach(({ from, to, expectedDiff }) => {
             const actualDiff = computeDiffByDays(from, to);
