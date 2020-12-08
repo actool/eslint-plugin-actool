@@ -25,8 +25,8 @@ const { INRELEVANT } = rule.MESSAGES;
  */
 const getMessage = (loc, diff) => {
     return {
-        lineMin: { messageId: INRELEVANT, data: { scope: "line", by: "days", loc, diff } },
-        blockMin: { messageId: INRELEVANT, data: { scope: "block", by: "days", loc, diff } },
+        lineDay: { messageId: INRELEVANT, data: { scope: "line", by: "days", loc, diff } },
+        blockDay: { messageId: INRELEVANT, data: { scope: "block", by: "days", loc, diff } },
         lineCommits: { messageId: INRELEVANT, data: { scope: "line", by: "commits", loc, diff } },
         blockCommits: { messageId: INRELEVANT, data: { scope: "block", by: "commits", loc, diff } },
     };
@@ -42,21 +42,21 @@ const errors = {
     component: {},
     versioned: {
         /** line 5 - 6 */
-        lineMin1: getMessage("5", "6").lineMin,
+        lineDay1: getMessage("5", "6").lineDay,
         /** block [8-8] - 3 */
-        blockMin1: getMessage("[8-8]", "3").blockMin,
+        blockDay1: getMessage("[8-8]", "3").blockDay,
         /** block [11-13] - 4 */
-        blockMin2: getMessage("[11-13]", "4").blockMin,
+        blockDay2: getMessage("[11-13]", "4").blockDay,
         /** block [21-23] - 126 */
         blockCom1: getMessage("[21-23]", "126").blockCommits,
         /** block [21-23] - 11 */
-        blockMin3: getMessage("[21-23]", "11").blockMin,
+        blockDay3: getMessage("[21-23]", "11").blockDay,
         /** line 29 - 30 */
-        lineMin2: getMessage("29", "30").lineMin,
+        lineDay2: getMessage("29", "30").lineDay,
         /** line 32 - 8 */
         lineCom1: getMessage("32", "8").lineCommits,
         /** line 32 - 42 */
-        lineMin3: getMessage("32", "42").lineMin,
+        lineDay3: getMessage("32", "42").lineDay,
     },
 };
 /** @remark Storing separately for flex testing */
@@ -80,7 +80,7 @@ const ruleTester = new RuleTester({
 });
 
 /**
- * !!! NOTE: After migrating diff logic (from diffMinutes to diffDays)
+ * !!! NOTE: After migrating diff logic (from diffDayutes to diffDays)
  * Some tests were crucially broken
  * Cause of these - they while stay commented (WITH OLD indices),
  * BUT LATER - should be converted in more sensitive
@@ -99,8 +99,8 @@ ruleTester.run("relevant-comments", rule, {
             // prettier-ignore
             options: [{ line: { ...options.byDays, ...options.diff10, ...options.enabled }, block: options.disabled }],
             // errors: [
-            //     // errors.versioned.lineMin2,
-            //     // errors.versioned.lineMin3
+            //     // errors.versioned.lineDay2,
+            //     // errors.versioned.lineDay3
             // ],
             ...fixtures.versioned,
         },
@@ -108,9 +108,9 @@ ruleTester.run("relevant-comments", rule, {
         {
             options: [{ line: { ...options.byDays, ...options.enabled }, block: options.disabled }],
             // errors: [
-            //     // errors.versioned.lineMin1,
-            //     // errors.versioned.lineMin2,
-            //     // errors.versioned.lineMin3,
+            //     // errors.versioned.lineDay1,
+            //     // errors.versioned.lineDay2,
+            //     // errors.versioned.lineDay3,
             // ],
             ...fixtures.versioned,
         },
@@ -138,9 +138,9 @@ ruleTester.run("relevant-comments", rule, {
         {
             options: [{ block: options.byDays }],
             errors: [
-                // errors.versioned.blockMin1,
-                // errors.versioned.blockMin2,
-                errors.versioned.blockMin3,
+                // errors.versioned.blockDay1,
+                // errors.versioned.blockDay2,
+                errors.versioned.blockDay3,
             ],
             ...fixtures.versioned,
         },
@@ -149,12 +149,12 @@ ruleTester.run("relevant-comments", rule, {
             options: [{ line: { ...options.byDays, ...options.enabled }, block: options.byDays }],
             // NOTE: order is matter
             errors: [
-                // errors.versioned.lineMin1,
-                // errors.versioned.blockMin1,
-                // errors.versioned.blockMin2,
-                errors.versioned.blockMin3,
-                // errors.versioned.lineMin2,
-                // errors.versioned.lineMin3,
+                // errors.versioned.lineDay1,
+                // errors.versioned.blockDay1,
+                // errors.versioned.blockDay2,
+                errors.versioned.blockDay3,
+                // errors.versioned.lineDay2,
+                // errors.versioned.lineDay3,
             ],
             ...fixtures.versioned,
         },
@@ -163,9 +163,9 @@ ruleTester.run("relevant-comments", rule, {
             options: [{ line: options.enabled, block: options.byDays }],
             // NOTE: order is matter
             errors: [
-                // errors.versioned.blockMin1,
-                // errors.versioned.blockMin2,
-                errors.versioned.blockMin3,
+                // errors.versioned.blockDay1,
+                // errors.versioned.blockDay2,
+                errors.versioned.blockDay3,
                 errors.versioned.lineCom1,
             ],
             ...fixtures.versioned,
@@ -174,8 +174,8 @@ ruleTester.run("relevant-comments", rule, {
         {
             options: [{ block: { ...options.byDays, ...options.diff4 } }],
             errors: [
-                // errors.versioned.blockMin2,
-                errors.versioned.blockMin3,
+                // errors.versioned.blockDay2,
+                errors.versioned.blockDay3,
             ],
             ...fixtures.versioned,
         },
