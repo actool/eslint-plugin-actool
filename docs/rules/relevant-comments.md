@@ -1,7 +1,9 @@
 # `relevant-comments`
 
-**Validate relevanting of line&#39;s comment doclet**
+**Validate relevanting of line's comment doclet**
 
+> ALERT: While, on version `0.1.X` rule is working too slow
+> Use only on at your own risk
 During the developement you may want to have specific block of code to have being reviewed by actool
 
 ```js
