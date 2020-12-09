@@ -58,7 +58,7 @@ Controls the rule behaviour for specific scope
 
 ```js
 // disable relevancy linting for line / block / module scopes
-"actool/relevant-comments": [2, { line: null }] // or { block: null } or { module: null }
+"actool/relevant-comments": [2, { line: { disabled: true } }] // or { block: { disabled: true } } or { module: { disabled: true } }
 // customize options for specific scope
 "actool/relevant-comments": [2, { 
     line: { ... }, // line scope config
