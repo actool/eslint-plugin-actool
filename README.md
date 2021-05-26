@@ -1,5 +1,7 @@
 # [eslint-plugin-actool](https://www.npmjs.com/package/eslint-plugin-actool)
 
+> `WIP:` For a while - not production ready
+
 <!-- FIXME: simplify -->
 <!-- see: https://gist.github.com/ChrisTollefson/a3af6d902a74a0afd1c2d79aadc9bb3f -->
 
